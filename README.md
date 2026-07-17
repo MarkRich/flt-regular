@@ -66,6 +66,15 @@ readable consequences `A^4 = 1` modulo `25` and
 or nonzero hypotheses are required.  This does not prove that the `5 ∣ C`
 branch occurs or that it is impossible, and it does not solve `(3, 5, 7)`.
 
+`BealRegular/Signature357SevenAdic.lean` treats the conditional `7 ∣ A`
+branch.  Assuming `7 ∣ A` and `A^3 + B^5 = C^7`, with only `A`--`B` and
+`A`--`C` coprimality, it proves `B = C^119` modulo `343`, then that `B` is a
+sixth root of unity modulo `49`, with
+`B mod 49 ∈ {1, 18, 19, 30, 31, 48}`.  No coprimality between `B` and `C`,
+positivity, or nonzero hypotheses are required; in particular, `A = 0` is
+permitted.  The theorems assume rather than derive `7 ∣ A`; they neither
+exclude that branch nor solve `(3, 5, 7)`.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
