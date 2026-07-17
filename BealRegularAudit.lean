@@ -9,6 +9,8 @@ import BealRegular
 #print axioms fermatLastTheoremThirteen
 #print axioms fermatLastTheoremSeventeen
 #print axioms fermatLastTheoremNineteen
+#print axioms isRegularPrime_twentyThree
+#print axioms fermatLastTheoremTwentyThree
 #print axioms BealRegular.no_solution_of_flt_divides_exponents
 #print axioms BealRegular.no_solution_equal_exponent_regular_prime
 #print axioms BealRegular.no_solution_if_regular_prime_dvd_exponents
@@ -25,6 +27,9 @@ import BealRegular
 #print axioms BealRegular.FLT_three_through_twentyThree_of_twentyThree
 #print axioms BealRegular.no_solution_equal_exponent_through_twentyThree_of_twentyThree
 #print axioms BealRegular.no_solution_if_three_through_twentyThree_dvd_exponents_of_twentyThree
+#print axioms BealRegular.FLT_three_through_twentyThree
+#print axioms BealRegular.no_solution_equal_exponent_through_twentyThree
+#print axioms BealRegular.no_solution_if_three_through_twentyThree_dvd_exponents
 #print axioms BealRegular.no_solution_equal_exponent_five
 #print axioms BealRegular.no_solution_equal_exponent_seven
 #print axioms BealRegular.no_solution_equal_exponent_eleven

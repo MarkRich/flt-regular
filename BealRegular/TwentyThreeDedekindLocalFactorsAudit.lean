@@ -1,0 +1,20 @@
+import BealRegular.TwentyThreeDedekindLocalFactors
+
+/-! Kernel axiom audit for the exponent-23 Dedekind local factors. -/
+
+namespace BealRegular.TwentyThreeDedekindLocalFactors
+
+#print axioms oddCharacterLocalFactorX
+#print axioms oddCharacterLocalFactorX_eq_eval_inv
+#print axioms nat_pow_cpow_neg
+#print axioms evaluated_localFactor_prime_order_cases
+#print axioms dedekindRationalLocalFactor_eq_of_inertia_ncard
+#print axioms cyclotomic_dedekindRationalLocalFactor_prime_order_cases
+#print axioms real_dedekindRationalLocalFactor_prime_order_cases
+#print axioms unramified_dedekind_local_factorization
+#print axioms realSubfield_ncard_primesOver_twentyThree
+#print axioms realSubfield_inertiaDeg_twentyThree_eq_one
+#print axioms oddCharacterLocalFactorX_twentyThree
+#print axioms ramified_dedekind_local_factorization
+
+end BealRegular.TwentyThreeDedekindLocalFactors
