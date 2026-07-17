@@ -60,6 +60,14 @@ integer-polynomial certificates for the remaining primes.  Their composition
 in `TwentyThreeRealSubfieldPID.lean` proves unconditionally that the maximal
 real subfield is a PID and has class number one.
 
+`TwentyThreeHasseUnitIndex.lean` also proves unconditionally that the Hasse
+unit index of `ℚ(ζ₂₃)` is one.  Its integral power-basis argument shows that
+complex conjugation acts trivially modulo `(ζ₂₃ - 1)`; a hypothetical index of
+two would then force `-1 = 1` in that residue field and hence put `2` in the
+ramified prime, a contradiction.  This settles the unit-index factor needed
+by an analytic relative class-number formula, but does not supply the still
+missing zeta/L-value factorization itself.
+
 `RelativeClassGroup.lean` defines the quotient of the upper class group by
 classes extended from a base field, carefully calling its generic cardinality
 an extended-class index rather than a relative class number.  It proves that

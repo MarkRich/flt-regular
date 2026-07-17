@@ -16,6 +16,7 @@ import BealRegular.TwentyThreeRealCertificates
 import BealRegular.TwentyThreeRealSubfieldClassNumber
 import BealRegular.TwentyThreeRealSubfieldPrimeClassification
 import BealRegular.TwentyThreeRealSubfieldPID
+import BealRegular.TwentyThreeHasseUnitIndex
 import BealRegular.RelativeClassGroup
 import BealRegular.TwentyThreeRelativeClassNumberResultant
 import BealRegular.TwentyThreeRelativeClassNumber
