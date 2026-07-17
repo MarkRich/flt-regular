@@ -123,6 +123,14 @@ ramified local identification at `q = 23`, the assembly of those specialized
 local identities, and the analytic or meromorphic continuation step still
 remain.
 
+`TwentyThreeRealPrimeDecomposition.lean` supplies the corresponding
+finite-prime decomposition data for the maximal real subfield.  For every
+rational prime `q != 23`, it proves unramifiedness and shows that orders `1`
+and `2` modulo `23` give eleven degree-one primes, while orders `11` and `22`
+give one degree-eleven prime.  This closes the real-subfield decomposition
+input, but does not assemble the specialized local identities or handle the
+ramified prime.
+
 `DedekindZetaEulerFoundations.lean` identifies nonzero ideals in any Dedekind
 domain with finite multisets of height-one prime ideals, proves the
 corresponding norm-product and fixed-norm coefficient formulas, and proves
