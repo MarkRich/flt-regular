@@ -1,0 +1,7 @@
+import BealRegular.TwentyThreeHasseUnitIndex
+
+namespace BealRegular.TwentyThreeHasseUnitIndex
+
+#print axioms indexRealUnits_eq_one
+
+end BealRegular.TwentyThreeHasseUnitIndex
