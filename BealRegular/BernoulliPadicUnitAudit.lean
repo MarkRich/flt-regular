@@ -1,0 +1,12 @@
+import BealRegular.BernoulliPadicUnit
+
+namespace BealRegular.KummerBernoulliBridge
+
+#print axioms prime_not_dvd_bernoulli_den_of_not_dvd_sub_one
+#print axioms prime_not_dvd_bernoulli_den_in_kummer_range
+#print axioms rat_padicValuation_eq_one_iff_not_dvd_num
+#print axioms bernoulli_padicValuation_eq_one_iff_not_dvd_num
+#print axioms bernoulliNumeratorCondition_iff_padicUnitCondition
+#print axioms twentyThree_bernoulliPadicUnitCondition
+
+end BealRegular.KummerBernoulliBridge

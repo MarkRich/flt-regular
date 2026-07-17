@@ -3,6 +3,9 @@ import BealRegular.Seventeen
 import BealRegular.CubicIdealCertificate
 import BealRegular.PrincipalIdealCertificate
 import BealRegular.TwentyThreeBernoulli
+import BealRegular.BernoulliPadicUnit
+import BealRegular.RegularPrimeTorsion
+import BealRegular.ClassGroupGaloisAction
 import BealRegular.TwentyThreeDesign
 import BealRegular.TwentyThreePrimeTwoCube
 import BealRegular.TwentyThreePrimeThreeCube

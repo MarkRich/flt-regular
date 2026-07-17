@@ -1,0 +1,9 @@
+import BealRegular.RegularPrimeTorsion
+
+namespace BealRegular.KummerBernoulliBridge
+
+#print axioms isRegularPrime_iff_no_p_torsion
+#print axioms isRegularPrime_of_bernoulli_no_p_torsion
+#print axioms kummerBernoulliImplication_iff_padicUnitsKillClassGroupPTorsion
+
+end BealRegular.KummerBernoulliBridge
