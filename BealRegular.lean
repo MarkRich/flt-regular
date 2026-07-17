@@ -25,6 +25,7 @@ import BealRegular.TwentyThreeRelativeClassNumberResultant
 import BealRegular.OddLValueAtZero
 import BealRegular.SawtoothFourier
 import BealRegular.SinZetaOne
+import BealRegular.DedekindZetaEulerFoundations
 import BealRegular.TwentyThreeAnalyticClassNumber
 import BealRegular.TwentyThreeLocalEulerFactors
 import BealRegular.TwentyThreeRelativeClassNumber

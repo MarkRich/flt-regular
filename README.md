@@ -100,6 +100,16 @@ not prove the global Dedekind-zeta factorization.  The ramified local factor at
 `q = 23`, a Dedekind-zeta Euler-product theorem, and the analytic or
 meromorphic continuation step still remain.
 
+`DedekindZetaEulerFoundations.lean` supplies generic foundations for the next
+Euler-product step.  It identifies nonzero ideals in any Dedekind domain with
+finite multisets of height-one prime ideals, proves the corresponding ideal-
+norm product and fixed-norm coefficient formulas, and proves that the
+Dedekind-zeta ideal-count Dirichlet series is absolutely summable and has sum
+`dedekindZeta` on `Re(s) > 1`.  It still does not construct the infinite Euler
+product: the infinite-multiset/geometric-series `HasProd` grouping over all
+prime ideals remains missing.  Consequently this module does not yet prove a
+global Dedekind-zeta factorization or its continuation beyond that half-plane.
+
 `OddLValueAtZero.lean` now proves unconditionally that the odd Hurwitz zeta
 value at zero is `sinZeta a 1 / pi`.  Given one pointwise Fourier endpoint, it
 then reduces the `L(0)` value of any odd function on `ZMod N` to its standard
