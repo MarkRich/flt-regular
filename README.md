@@ -5,10 +5,12 @@ in [Lean](https://leanprover-community.github.io/).
 ## Beal companion extension
 
 The `BealRegular` library adds assumption-free, kernel-checked FLT coverage for
-every equal exponent `3 <= n <= 22`.  Composite exponents are reduced to the
-formal FLT theorems at `3`, `4`, `5`, `7`, `11`, `13`, `17`, or `19`.  The
-same reduction excludes a mixed-power equation whenever one of those integers
-from `3` through `22` divides all three exponents.
+every equal exponent `3 <= n <= 23`.  Composite exponents are reduced to the
+formal FLT theorems at `3`, `4`, `5`, `7`, `11`, `13`, `17`, `19`, or `23`.
+The same reduction excludes a mixed-power equation whenever an integer from
+`3` through `23` divides all three exponents.  This is a genuine unconditional
+FLT23 milestone, but it does not prove Beal's conjecture: general mixed
+exponent signatures remain outside this common-divisor reduction.
 
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
@@ -17,10 +19,12 @@ for `17` and all `558` certificates for `19`; independent Node validators
 check the generated data and dispatch tables, and the renderers are byte-
 idempotent.
 
-Exponent `23` is deliberately separated from the unconditional range.  The
-project kernel-checks the finite Bernoulli numerator condition and proves that
-an exponent-three certificate for the cyclotomic class group would imply
-regularity and FLT23.  `BealRegular/CubicIdealCertificate.lean` also verifies
+Exponent `23` is now unconditional through the global odd-character
+factorization described below.  The earlier certificate routes remain useful
+independent checks and alternatives.  In particular, the project kernel-checks
+the finite Bernoulli numerator condition and proves that an exponent-three
+certificate for the cyclotomic class group would imply regularity and FLT23.
+`BealRegular/CubicIdealCertificate.lean` also verifies
 the exact five-polynomial certificate showing that a Kummer--Dedekind ideal
 has principal cube.  `BealRegular/TwentyThreePrimeTwoCube.lean` applies that
 checker to a concrete irreducible degree-11 factor modulo `2`, identifies the
@@ -60,13 +64,12 @@ integer-polynomial certificates for the remaining primes.  Their composition
 in `TwentyThreeRealSubfieldPID.lean` proves unconditionally that the maximal
 real subfield is a PID and has class number one.
 
-`TwentyThreeHasseUnitIndex.lean` also proves unconditionally that the Hasse
+`TwentyThreeHasseUnitIndex.lean` proves unconditionally that the Hasse
 unit index of `ℚ(ζ₂₃)` is one.  Its integral power-basis argument shows that
 complex conjugation acts trivially modulo `(ζ₂₃ - 1)`; a hypothetical index of
 two would then force `-1 = 1` in that residue field and hence put `2` in the
-ramified prime, a contradiction.  This settles the unit-index factor needed
-by an analytic relative class-number formula, but does not supply the still
-missing zeta/L-value factorization itself.
+ramified prime, a contradiction.  This settles the unit-index factor used by
+the analytic relative class-number calculation completed below.
 
 `RelativeClassGroup.lean` defines the quotient of the upper class group by
 classes extended from a base field, carefully calling its generic cardinality
@@ -85,8 +88,8 @@ sum with `S(chi(5))`, and proves that the eleven values `chi(5)` for odd
 characters are exactly the roots of `X^11 + 1`.  Together with the
 unconditional `L(chi, 0)` formula from `SinZetaOne.lean`, this proves
 `prod_(chi odd) L(chi, 0) = 3 * 2^10 / 23`, or equivalently that the normalized
-finite product is exactly `3`.  This closes the finite odd-character product,
-but does not prove the global Dedekind-zeta/Dirichlet-`L` factorization.
+finite product is exactly `3`.  This closes the finite odd-character product
+consumed by the global factorization below.
 
 `TwentyThreeAnalyticClassNumber.lean` now specializes the analytic class-number
 formula on both fields and cancels every known signature, torsion,
@@ -106,9 +109,17 @@ subfield zeta function times the product of the eleven odd Dirichlet
 the individual and finite-product functional equations, and the residue-limit
 argument.  Under that one proposition, positivity forces the total root
 number to be `+1`, the existing analytic bridge follows, and Lean obtains
-class number `3`, regularity of `23`, and FLT for exponent `23`.  The module
-does not establish `GlobalFactorizationTwentyThree`; proving that proposition
-is still the open formalization step.
+class number `3`, regularity of `23`, and FLT for exponent `23`.
+
+`TwentyThreeRealPrimeDecomposition.lean` classifies the inertia degree and
+number of primes in the maximal real subfield for every rational prime away
+from `23`.  `TwentyThreeDedekindLocalFactors.lean` combines those results with
+the full cyclotomic splitting calculation, proves the corresponding Dedekind
+local-factor identity in all four residue-order cases, and handles the unique
+ramified prime at `23`.  `TwentyThreeGlobalFactorization.lean` then assembles
+the pointwise identities with the convergent Euler products on `Re(s) > 1`.
+It proves `GlobalFactorizationTwentyThree` with no hypothesis, and therefore
+proves cyclotomic class number `3`, regularity of `23`, and FLT23.
 
 `TwentyThreeLocalEulerFactors.lean` proves the finite algebraic local-factor
 calculation away from `23`.  It defines the eleven odd Dirichlet characters
@@ -117,19 +128,9 @@ and computes the corresponding odd-character Euler polynomials as
 `(1 - X)^11`, `(1 + X)^11`, `1 - X^11`, and `1 + X^11`.  It also proves the
 matching cyclotomic/real-subfield denominator identities and applies them
 directly to every rational prime `q != 23`, together with the full cyclotomic
-splitting-count formula.  These are local polynomial identities only: they do
-not prove the global cyclotomic/real-subfield/odd-character factorization.  The
-ramified local identification at `q = 23`, the assembly of those specialized
-local identities, and the analytic or meromorphic continuation step still
-remain.
-
-`TwentyThreeRealPrimeDecomposition.lean` supplies the corresponding
-finite-prime decomposition data for the maximal real subfield.  For every
-rational prime `q != 23`, it proves unramifiedness and shows that orders `1`
-and `2` modulo `23` give eleven degree-one primes, while orders `11` and `22`
-give one degree-eleven prime.  This closes the real-subfield decomposition
-input, but does not assemble the specialized local identities or handle the
-ramified prime.
+splitting-count formula.  `TwentyThreeDedekindLocalFactors.lean` specializes
+these polynomial identities to the Dedekind Euler factors and supplies the
+ramified local identification at `q = 23`.
 
 `DedekindZetaEulerFoundations.lean` identifies nonzero ideals in any Dedekind
 domain with finite multisets of height-one prime ideals, proves the
@@ -140,10 +141,10 @@ a free commutative monoid.  `DedekindZetaEulerProduct.lean` combines them to
 prove unconditionally that, for every number field and `Re(s) > 1`,
 `dedekindZeta` is the convergent product of its prime-ideal geometric factors.
 It also groups those factors by the rational prime below them and identifies
-each fiber with Mathlib's finite `primesOver (span {q})` type.  This closes the
-generic Euler-product step only: it does not prove the specialized
-cyclotomic/real/odd-character local-factor identity, the ramified factor at
-`23`, or any continuation beyond the half-plane of absolute convergence.
+each fiber with Mathlib's finite `primesOver (span {q})` type.  The specialized
+modules above provide the remaining local identities.  No continuation of the
+Euler product beyond its half-plane of absolute convergence is needed: the
+existing analytic bridge takes the residue limit from within `Re(s) > 1`.
 
 `OddLValueAtZero.lean` now proves unconditionally that the odd Hurwitz zeta
 value at zero is `sinZeta a 1 / pi`.  Given one pointwise Fourier endpoint, it
@@ -160,21 +161,17 @@ generic Abelian boundary theorem identifies Mathlib's analytically continued
 modulus, and therefore gives unconditional weighted-sum formulas for odd
 functions and odd Dirichlet characters at zero.  This closes the sine-zeta
 endpoint.  `TwentyThreeOddCharacterProduct.lean` uses those values to compute
-the finite product over all odd characters; the cyclotomic Dedekind-zeta
-factorization remains separate.
+the finite product over all odd characters, which the completed global
+factorization feeds into the class-number computation.
 
-These analytic constants still do not by themselves prove regularity of `23`.
-The same missing bridge is also exposed in an integer class-number form in
-`TwentyThreeRelativeClassNumber.lean` as
-`RelativeClassNumberFormulaTwentyThree`: it must identify the relative class
-number with the normalized odd-character product already computed to `3`.
-Given exactly that hypothesis, Lean now proves the full cyclotomic class number
-is `3`, that `23` is regular, and FLT23.  The project neither assumes this
-formula nor claims that the non-PID cyclotomic field is a PID.  See
-`TwentyThreeBernoulli.md` and `TwentyThreeDesign.md` for the explicit proof
-routes and remaining gap.
+`TwentyThreeRelativeClassNumber.lean` retains an alternative
+assumption-explicit interface, `RelativeClassNumberFormulaTwentyThree`, for an
+integer-form relative class-number theorem.  The completed Euler-product route
+does not assume that interface and does not claim that the non-PID cyclotomic
+field is a PID.  `TwentyThreeBernoulli.md` and `TwentyThreeDesign.md` document
+the earlier alternative proof programs.
 
-The alternative Kummer route is now reduced to one equally explicit core:
+The alternative Kummer route remains reduced to one explicit core:
 `BernoulliPadicUnitCondition p` must imply that the cyclotomic class group has
 no `p`-torsion.  The surrounding denominator, valuation, finite-group, and
 Galois-action lemmas are kernel-checked here; the missing implication requires

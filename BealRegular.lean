@@ -33,6 +33,7 @@ import BealRegular.TwentyThreeAnalyticClassNumber
 import BealRegular.TwentyThreeLocalEulerFactors
 import BealRegular.TwentyThreeOddCharacterProduct
 import BealRegular.TwentyThreeOddCharacterAnalyticBridge
+import BealRegular.TwentyThreeGlobalFactorization
 import BealRegular.TwentyThreeRelativeClassNumber
 import FltRegular.SmallNumbers.SmallNumbers
 
@@ -200,8 +201,10 @@ theorem no_solution_if_three_through_twentyTwo_dvd_exponents
   no_solution_of_flt_divides_exponents (FLT_three_through_twentyTwo hn)
     hnx hny hnz hA hB hC
 
-/-! Exponent `23` is kept assumption-explicit until either the class-group
-cube certificates or Kummer's Bernoulli criterion is formalized. -/
+/-! The unconditional global odd-character factorization proves FLT at `23`.
+The assumption-explicit helper theorems remain useful as generic interfaces;
+the wrappers below discharge their endpoint with `fermatLastTheoremTwentyThree`.
+-/
 
 /-- A supplied FLT theorem at `23` extends the unconditional interval
 `3..22` by one. -/
@@ -234,6 +237,31 @@ theorem no_solution_if_three_through_twentyThree_dvd_exponents_of_twentyThree
   no_solution_of_flt_divides_exponents
     (FLT_three_through_twentyThree_of_twentyThree h23 hn)
     hnx hny hnz hA hB hC
+
+/-- Fermat's Last Theorem for every exponent from `3` through `23`. -/
+theorem FLT_three_through_twentyThree {n : ℕ}
+    (hn : n ∈ Finset.Icc 3 23) : FermatLastTheoremFor n :=
+  FLT_three_through_twentyThree_of_twentyThree
+    fermatLastTheoremTwentyThree hn
+
+/-- No nonzero equal-exponent solution exists throughout the fully
+formalized interval `3 <= n <= 23`. -/
+theorem no_solution_equal_exponent_through_twentyThree {A B C n : ℕ}
+    (hn : n ∈ Finset.Icc 3 23)
+    (hA : A ≠ 0) (hB : B ≠ 0) (hC : C ≠ 0) :
+    A ^ n + B ^ n ≠ C ^ n :=
+  FLT_three_through_twentyThree hn A B C hA hB hC
+
+/-- A common mixed-exponent divisor anywhere in `3..23` rules out a Beal
+equation with nonzero bases. -/
+theorem no_solution_if_three_through_twentyThree_dvd_exponents
+    {A B C x y z n : ℕ}
+    (hn : n ∈ Finset.Icc 3 23)
+    (hnx : n ∣ x) (hny : n ∣ y) (hnz : n ∣ z)
+    (hA : A ≠ 0) (hB : B ≠ 0) (hC : C ≠ 0) :
+    A ^ x + B ^ y ≠ C ^ z :=
+  no_solution_of_flt_divides_exponents
+    (FLT_three_through_twentyThree hn) hnx hny hnz hA hB hC
 
 /-! ## Equal-exponent consequences -/
 
