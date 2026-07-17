@@ -45,6 +45,13 @@ coprimality assumption.  The combined theorem covers every nonzero-base
 solution whose result exponent is divisible by `3` or `4`; it does not claim
 anything about the remaining result exponents.
 
+`BealRegular/Signature357Residues.lean` begins the smallest unresolved reduced
+signature `(3, 5, 7)` with unconditional local restrictions.  Any natural
+identity `A^3 + B^5 = C^7` avoids two residue classes for `C` modulo `31`, four
+for `B` modulo `43`, and six for `A` modulo `71`.  These are necessary local
+conditions only: they do not prove that the `(3, 5, 7)` signature has no
+primitive solution, and therefore do not settle the full Beal conjecture.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
