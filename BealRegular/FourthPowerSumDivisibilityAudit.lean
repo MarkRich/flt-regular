@@ -1,0 +1,13 @@
+import BealRegular.FourthPowerSumDivisibility
+
+/-! Kernel axiom audit for the fourth-power-sum divisibility closures. -/
+
+namespace BealRegular.FourthPowerSumDivisibility
+
+#print axioms no_coprime_fourthPowerSum_if_three_dvd_exponent
+#print axioms fourthPowerSum_hasCommonPrimeFactor_if_three_dvd_exponent
+#print axioms no_fourthPowerSum_if_four_dvd_exponent
+#print axioms fourthPowerSum_hasCommonPrimeFactor_if_three_or_four_dvd_exponent
+#print axioms no_coprime_fourthPowerSum_if_three_or_four_dvd_exponent
+
+end BealRegular.FourthPowerSumDivisibility

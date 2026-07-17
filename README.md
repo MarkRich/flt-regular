@@ -36,6 +36,15 @@ natural solution of `A^4 + B^4 = C^3` has one prime dividing all three bases.
 This settles that signature, not the full Beal conjecture; the other mixed
 reduced signatures remain open here.
 
+`BealRegular/FourthPowerSumDivisibility.lean` extends that solved signature to
+an infinite family.  If `3` divides `n`, every nonzero solution of
+`A^4 + B^4 = C^n` has one prime dividing `A`, `B`, and `C`; this is Beal's
+exact conclusion, not merely a primitive nonexistence statement.  If `4`
+divides `n`, formal FLT4 rules out every solution with nonzero bases without a
+coprimality assumption.  The combined theorem covers every nonzero-base
+solution whose result exponent is divisible by `3` or `4`; it does not claim
+anything about the remaining result exponents.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
