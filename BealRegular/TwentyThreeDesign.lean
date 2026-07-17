@@ -1,4 +1,5 @@
 import BealRegular.ClassGroupExponentMinkowski
+import BealRegular.TwentyThreeRamifiedPrime
 import FltRegular.FltRegular
 import Mathlib.GroupTheory.Exponent
 import Mathlib.GroupTheory.Perm.Cycle.Type
@@ -109,6 +110,20 @@ theorem isRegularPrime_twentyThree_of_one_prime_above_cubes
     IsRegularPrime 23 := by
   apply isRegularPrime_twentyThree_of_cube
   exact classGroup_pow_eq_one_of_one_prime_above (K := K23) 3 h
+
+/-- The explicit cube-principality certificates above `2`, `3`, and the
+ramified prime `23` reduce regularity to the remaining rational primes in the
+Minkowski interval. -/
+theorem isRegularPrime_twentyThree_of_other_prime_above_cubes
+    (h : ∀ p ∈ Finset.Icc 1 ⌊M23⌋₊, p.Prime →
+      p ≠ 2 → p ≠ 3 → p ≠ 23 →
+      ∃ P ∈ primesOver (span {(p : ℤ)}) (NumberField.RingOfIntegers K23),
+        ⌊M23⌋₊ < p ^ P.inertiaDeg ℤ ∨
+          Submodule.IsPrincipal (P ^ 3)) :
+    IsRegularPrime 23 :=
+  isRegularPrime_twentyThree_of_one_prime_above_cubes
+    (BealRegular.TwentyThreeRamifiedPrime.one_prime_above_cubes_of_not_two_three_twentyThree
+      ⌊M23⌋₊ h)
 
 /-- Any explicit cube certificate reaching the endpoint above also yields the
 regular-prime FLT theorem at exponent `23`. -/
