@@ -8,6 +8,8 @@ import BealRegular.TwentyThreePrimeThreeCube
 import BealRegular.TwentyThreeRamifiedPrime
 import BealRegular.TwentyThreeRealSubfield
 import BealRegular.TwentyThreeRealSubfieldEisenstein
+import BealRegular.TwentyThreeRealSubfieldPowerBasis
+import BealRegular.TwentyThreeRealSubfieldDiscriminant
 import FltRegular.SmallNumbers.SmallNumbers
 
 /-!

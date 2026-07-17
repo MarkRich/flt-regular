@@ -153,8 +153,13 @@ model layer: `K` is a CM field, `K⁺` has degree `11`, the element
 `a`.  `BealRegular/TwentyThreeRealSubfieldEisenstein.lean` checks that shifting
 by `X - 2` gives a `23`-Eisenstein polynomial, proves irreducibility over `ℤ`
 and `ℚ`, identifies the polynomial with `minpoly ℚ a`, and proves that `a`
-generates `K⁺`.  The ring-of-integers identification, discriminant bridge, and
-PID certificates remain separate proof obligations.
+generates `K⁺`.  `TwentyThreeRealSubfieldPowerBasis.lean` constructs rational
+power bases for `a` and its Eisenstein translate and proves a reusable
+norm-resultant identity.  `TwentyThreeRealSubfieldDiscriminant.lean` checks an
+exact normalized polynomial-remainder sequence, proves both the rational and
+integral discriminants are `23^10`, and uses the Eisenstein cancellation
+theorem to identify the generated order with the full integral closure.  The
+class-number-one certificates remain a separate proof obligation.
 
 The dependency-free script
 `scripts/TwentyThreeRelativeClassNumber.mjs` checks the following exact
@@ -215,11 +220,9 @@ with the relative class number `h⁻(K) = h(K) / h(K⁺)`. Once that theorem is
 available, the checked resultant reduces `h⁻(K) = 3` to integer arithmetic.
 An unconditional full proof along this route would still need:
 
-1. a Lean identification of the displayed degree-11 model with `K⁺`, including
-   its ring of integers and discriminant;
-2. principal-ideal certificates above the twelve displayed unramified primes
+1. principal-ideal certificates above the twelve displayed unramified primes
    and the ramified prime `23`, to prove `h(K⁺) = 1`;
-3. the relative class-number formula itself. Mathlib has useful ingredients
+2. the relative class-number formula itself. Mathlib has useful ingredients
    (`NumberField.DedekindZeta`, the CM-field regulator ratio, cyclotomic
    Dirichlet characters, functional equations, Gauss sums, and resultants),
    but it does not currently assemble them into this formula.
