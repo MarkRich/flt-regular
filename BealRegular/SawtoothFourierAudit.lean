@@ -1,0 +1,16 @@
+import BealRegular.SawtoothFourier
+
+namespace Complex
+
+#print axioms norm_sum_pow_succ_le_two_div_norm_sub_one
+#print axioms exists_tendsto_sum_pow_succ_div_succ_of_norm_eq_one_ne_one
+#print axioms tsum_pow_succ_div_succ_mul_pow_eq_neg_log_div
+#print axioms tendsto_sum_pow_succ_div_succ_eq_neg_log
+#print axioms arg_one_sub_exp_two_pi_mul_I
+#print axioms exp_two_pi_mul_I_ne_one_of_pos_of_lt_one
+#print axioms im_exp_two_pi_mul_I_pow
+#print axioms im_exp_two_pi_mul_I_pow_div
+#print axioms norm_sum_sin_two_pi_mul_le_two_div_norm_exp_sub_one
+#print axioms tendsto_sum_sin_two_pi_mul_div
+
+end Complex

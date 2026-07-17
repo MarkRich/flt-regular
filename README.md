@@ -93,10 +93,13 @@ value at zero is `sinZeta a 1 / pi`.  Given one pointwise Fourier endpoint, it
 then reduces the `L(0)` value of any odd function on `ZMod N` to its standard
 finite weighted sum.  That sole input is the explicitly named proposition
 `ZMod.SinZetaOneSawtoothFormula N`; it is passed as a theorem parameter and is
-not installed as an axiom or instance.  Proving this conditionally convergent
-`s = 1` sawtooth endpoint would advance the remaining odd-character bridge,
-but it would not by itself supply the cyclotomic Dedekind-zeta factorization or
-the finite product over all odd characters.
+not installed as an axiom or instance.  `SawtoothFourier.lean` now proves the
+underlying conditionally convergent series in natural order: for `0 < x < 1`,
+the partial sums of `sin (2 * pi * k * x) / k` tend to
+`pi * (1 / 2 - x)`.  What remains at this endpoint is to identify Mathlib's
+analytically continued `HurwitzZeta.sinZeta x 1` with that natural-order limit.
+Even that identification would not by itself supply the cyclotomic
+Dedekind-zeta factorization or the finite product over all odd characters.
 
 These analytic constants still do not by themselves prove regularity of `23`.
 The same missing bridge is also exposed in an integer class-number form in
