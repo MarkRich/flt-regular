@@ -52,6 +52,12 @@ for `B` modulo `43`, and six for `A` modulo `71`.  These are necessary local
 conditions only: they do not prove that the `(3, 5, 7)` signature has no
 primitive solution, and therefore do not settle the full Beal conjecture.
 
+`BealRegular/Signature357PrimePower.lean` adds conditional 2-adic restrictions
+for pairwise-coprime `(3, 5, 7)` identities: according to which base is even,
+it proves congruences modulo `8`, `32`, or `128`.  The statements allow zero
+bases, do not assert that any particular branch occurs, exclude no branch,
+and do not solve the `(3, 5, 7)` signature.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates

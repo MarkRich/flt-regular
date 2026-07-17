@@ -45,6 +45,8 @@ import BealRegular
 #print axioms BealRegular.Signature357Residues.signature357_nat_mod31_C_exclusion
 #print axioms BealRegular.Signature357Residues.signature357_nat_mod43_B_exclusion
 #print axioms BealRegular.Signature357Residues.signature357_nat_mod71_A_exclusion
+#print axioms BealRegular.Signature357PrimePower.signature357_two_adic_branch_table
+#print axioms BealRegular.Signature357PrimePower.signature357_mod128_of_even_C
 #print axioms BealRegular.no_solution_of_flt_divides_exponents
 #print axioms BealRegular.no_solution_equal_exponent_regular_prime
 #print axioms BealRegular.no_solution_if_regular_prime_dvd_exponents
