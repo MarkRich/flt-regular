@@ -60,12 +60,26 @@ integer-polynomial certificates for the remaining primes.  Their composition
 in `TwentyThreeRealSubfieldPID.lean` proves unconditionally that the maximal
 real subfield is a PID and has class number one.
 
-This does not by itself prove regularity of `23`: the remaining compact-route
-obligation is the relative class-number or equivalent Kummer bridge for the
-full cyclotomic field.  The project does not assume
-Kummer's Bernoulli criterion or claim that the non-PID cyclotomic field is a
-PID.  See `TwentyThreeBernoulli.md` and `TwentyThreeDesign.md` for the explicit
-proof routes and remaining gap.
+`RelativeClassGroup.lean` defines the quotient of the upper class group by
+classes extended from a base field, carefully calling its generic cardinality
+an extended-class index rather than a relative class number.  It proves that
+over the now-established class-number-one real subfield this index is exactly
+the full cyclotomic class number.  `TwentyThreeRelativeClassNumberResultant.lean`
+then kernel-checks an exact polynomial remainder certificate for
+`Res(X^11 + 1, S) = -3 * 46^10`, where the coefficients of `S` are the powers
+of the primitive residue `5` modulo `23`.  The independent Node checker reaches
+the same integer by fraction-free determinant arithmetic.
+
+This still does not by itself prove regularity of `23`.  The sole remaining
+compact-route theorem is exposed honestly in
+`TwentyThreeRelativeClassNumber.lean` as
+`RelativeClassNumberFormulaTwentyThree`: it must identify the relative class
+number with the normalized odd-character product already computed to `3`.
+Given exactly that hypothesis, Lean now proves the full cyclotomic class number
+is `3`, that `23` is regular, and FLT23.  The project neither assumes this
+formula nor claims that the non-PID cyclotomic field is a PID.  See
+`TwentyThreeBernoulli.md` and `TwentyThreeDesign.md` for the explicit proof
+routes and remaining gap.
 
 Useful verification commands are:
 
@@ -78,6 +92,7 @@ node scripts/validate_23_prime2_cube_certificate.mjs
 node scripts/validate_23_prime3_cube_certificate.mjs
 node scripts/validate_23_real_certificates.mjs
 node scripts/render_23_real_certificates.mjs
+node scripts/TwentyThreeRelativeClassNumber.mjs
 ```
 
 The following readme has been shamelessly copied from the [Liquid Tensor Experiment](https://github.com/leanprover-community/lean-liquid/).

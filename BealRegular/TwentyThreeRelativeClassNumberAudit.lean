@@ -1,0 +1,12 @@
+import BealRegular.TwentyThreeRelativeClassNumber
+
+namespace BealRegular.TwentyThreeRelativeClassNumber
+
+#print axioms relativeClassNumberTwentyThree_eq_classNumber
+#print axioms relativeClassNumberTwentyThree_eq_three_of_formula
+#print axioms cyclotomicClassNumberTwentyThree_eq_three_of_formula
+#print axioms isRegularPrime_twentyThree_of_relativeClassNumber_coprime
+#print axioms isRegularPrime_twentyThree_of_relativeClassNumberFormula
+#print axioms fermatLastTheoremTwentyThree_of_relativeClassNumberFormula
+
+end BealRegular.TwentyThreeRelativeClassNumber
