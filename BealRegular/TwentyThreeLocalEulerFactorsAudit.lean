@@ -1,0 +1,26 @@
+import BealRegular.TwentyThreeLocalEulerFactors
+
+/-! Kernel axiom audit for the local Euler-factor identities at `23`. -/
+
+#print axioms BealRegular.orderOf_unit_zmodTwentyThree_cases
+#print axioms BealRegular.oddCharacters23
+#print axioms BealRegular.mem_oddCharacters23
+#print axioms BealRegular.sum_oddCharacters23_apply
+#print axioms BealRegular.sum_oddCharacters23_apply_pow
+#print axioms BealRegular.card_oddCharacters23
+#print axioms BealRegular.oddCharacterEulerPolynomialTwentyThree
+#print axioms BealRegular.oddCharacterEulerPolynomialTwentyThree_one
+#print axioms BealRegular.oddCharacterEulerPolynomialTwentyThree_negOne
+#print axioms BealRegular.oddCharacterEulerPolynomialTwentyThree_of_orderOne
+#print axioms BealRegular.oddCharacterEulerPolynomialTwentyThree_of_orderTwo
+#print axioms BealRegular.oddCharacterEulerPolynomialTwentyThree_of_orderEleven
+#print axioms BealRegular.oddCharacterEulerPolynomialTwentyThree_of_orderTwentyTwo
+#print axioms BealRegular.oddCharacterEulerPolynomialTwentyThree_order_cases
+#print axioms BealRegular.cyclotomicRealOdd_localEulerFactor_identity_orderOne
+#print axioms BealRegular.cyclotomicRealOdd_localEulerFactor_identity_orderTwo
+#print axioms BealRegular.cyclotomicRealOdd_localEulerFactor_identity_orderEleven
+#print axioms BealRegular.cyclotomicRealOdd_localEulerFactor_identity_orderTwentyTwo
+#print axioms BealRegular.cyclotomicRealOdd_localEulerFactor_order_cases
+#print axioms BealRegular.oddCharacterEulerPolynomialTwentyThree_prime_order_cases
+#print axioms BealRegular.cyclotomicRealOdd_localEulerFactor_prime_order_cases
+#print axioms BealRegular.cyclotomic23_ncard_primesOver_mul_orderOf

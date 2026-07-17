@@ -88,6 +88,18 @@ factorization is exposed as the proposition
 `OddCharacterAnalyticBridgeTwentyThree`; if supplied, Lean proves `h = 3`,
 regularity of `23`, and FLT for exponent `23`.
 
+`TwentyThreeLocalEulerFactors.lean` proves the finite algebraic local-factor
+calculation away from `23`.  It defines the eleven odd Dirichlet characters
+modulo `23`, proves that a nonzero residue has order `1`, `2`, `11`, or `22`,
+and computes the corresponding odd-character Euler polynomials as
+`(1 - X)^11`, `(1 + X)^11`, `1 - X^11`, and `1 + X^11`.  It also proves the
+matching cyclotomic/real-subfield denominator identities and applies them
+directly to every rational prime `q != 23`, together with the full cyclotomic
+splitting-count formula.  These are local polynomial identities only: they do
+not prove the global Dedekind-zeta factorization.  The ramified local factor at
+`q = 23`, a Dedekind-zeta Euler-product theorem, and the analytic or
+meromorphic continuation step still remain.
+
 `OddLValueAtZero.lean` now proves unconditionally that the odd Hurwitz zeta
 value at zero is `sinZeta a 1 / pi`.  Given one pointwise Fourier endpoint, it
 then reduces the `L(0)` value of any odd function on `ZMod N` to its standard
