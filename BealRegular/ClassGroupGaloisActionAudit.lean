@@ -1,0 +1,8 @@
+import BealRegular.ClassGroupGaloisAction
+
+namespace BealRegular.KummerBernoulliBridge
+
+#print axioms classGroupAutOfAlgEquiv_pow
+#print axioms classGroupAutOfAlgEquiv_preserves_p_torsion
+
+end BealRegular.KummerBernoulliBridge

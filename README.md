@@ -99,6 +99,12 @@ formula nor claims that the non-PID cyclotomic field is a PID.  See
 `TwentyThreeBernoulli.md` and `TwentyThreeDesign.md` for the explicit proof
 routes and remaining gap.
 
+The alternative Kummer route is now reduced to one equally explicit core:
+`BernoulliPadicUnitCondition p` must imply that the cyclotomic class group has
+no `p`-torsion.  The surrounding denominator, valuation, finite-group, and
+Galois-action lemmas are kernel-checked here; the missing implication requires
+Stickelberger/Herbrand machinery that is not currently available in Mathlib.
+
 Useful verification commands are:
 
 ```sh
