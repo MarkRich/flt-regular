@@ -1,0 +1,9 @@
+import BealRegular.TwentyThreeRealPrimeDecomposition
+
+namespace BealRegular.TwentyThreeRealPrimeDecomposition
+
+#print axioms realSubfield_inertiaDeg_order_cases
+#print axioms realSubfield_ramificationIdx_eq_one
+#print axioms realSubfield_ncard_primesOver_order_cases
+
+end BealRegular.TwentyThreeRealPrimeDecomposition
