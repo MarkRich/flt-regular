@@ -86,6 +86,18 @@ coprimality, it proves `B + A^423537 = 0` modulo `823543`, as well as
 Neither divisibility placement is derived or excluded, and these restrictions
 do not prove that the `(3, 5, 7)` signature has no solution.
 
+`BealRegular/Signature357RemainingPrimeBranches.lean` treats two more
+conditional placements.  In the assumed `5 ∣ A` branch, with only `A`--`B`
+and `A`--`C` coprimality, it proves `C = B^15` modulo `125` and
+`C mod 25 ∈ {1, 7, 18, 24}`.  This branch allows the genuine zero-base case
+`(A, B, C) = (0, 1, 1)`.  In the separately assumed `7 ∣ B` branch, with
+only `A`--`B` and `B`--`C` coprimality, it proves `A^6 = 1` and `C^14 = 1`
+modulo `49`, yielding coordinatewise necessary residue lists for `A` and
+`C`.  This branch allows `(A, B, C) = (1, 0, 1)`.  The lists are necessary
+conditions only; they do not assert that any listed residue pair is realized.
+Neither divisibility placement is derived or excluded, and no nonexistence
+result for `(3, 5, 7)` follows.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
