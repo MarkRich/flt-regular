@@ -1,6 +1,7 @@
 import BealRegular.SignatureReduction
 import BealRegular.GaussianCubeParametrization
 import BealRegular.QuarticThreeDescent
+import BealRegular.GaussianQuarticThreeBridge
 import BealRegular.Nineteen
 import BealRegular.Seventeen
 import BealRegular.CubicIdealCertificate

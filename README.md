@@ -28,10 +28,13 @@ the resulting coprime two-parameter coordinate identities.
 `BealRegular/QuarticThreeDescent.lean` independently gives an unconditional
 infinite descent excluding solutions of `u^4 = 3 * v^4 + w^2` whose quartic
 bases `u` and `v` are nonzero and coprime (with no nonzero assumption on `w`).
-This auxiliary exclusion still does not finish the reduced `(4, 4, 3)`
-signature: a bridge must derive its exact hypotheses,
-including the correct sign and the exceptional factor-of-`3` split, from the
-Gaussian coordinate identities.
+`BealRegular/GaussianQuarticThreeBridge.lean` now supplies the complete
+bridge, including parity, the regular and exceptional factor-of-`3` square
+splits, and both integer-sign orientations.  Lean therefore solves the
+reduced `(4, 4, 3)` signature with Beal's exact conclusion: every nonzero
+natural solution of `A^4 + B^4 = C^3` has one prime dividing all three bases.
+This settles that signature, not the full Beal conjecture; the other mixed
+reduced signatures remain open here.
 
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
