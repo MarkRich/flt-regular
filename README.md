@@ -24,9 +24,14 @@ mixed families such as `(4, 5, 23)` and `(3, 7, 11)` remain to be settled.
 `BealRegular/GaussianCubeParametrization.lean` starts the reduced signature
 `(4, 4, 3)`.  For coprime `x, y` with `x^4 + y^4` odd, it proves that any
 equation `x^4 + y^4 = z^3` makes `x^2 + y^2 i` a Gaussian cube and derives
-the resulting coprime two-parameter coordinate identities.  This is only the
-parametrization layer: no infinite descent or final `(4, 4, 3)` nonexistence
-claim is made.
+the resulting coprime two-parameter coordinate identities.
+`BealRegular/QuarticThreeDescent.lean` independently gives an unconditional
+infinite descent excluding solutions of `u^4 = 3 * v^4 + w^2` whose quartic
+bases `u` and `v` are nonzero and coprime (with no nonzero assumption on `w`).
+This auxiliary exclusion still does not finish the reduced `(4, 4, 3)`
+signature: a bridge must derive its exact hypotheses,
+including the correct sign and the exceptional factor-of-`3` split, from the
+Gaussian coordinate identities.
 
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
