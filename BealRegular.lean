@@ -6,6 +6,7 @@ import BealRegular.TwentyThreeDesign
 import BealRegular.TwentyThreePrimeTwoCube
 import BealRegular.TwentyThreePrimeThreeCube
 import BealRegular.TwentyThreeRamifiedPrime
+import BealRegular.TwentyThreeRealSubfield
 import FltRegular.SmallNumbers.SmallNumbers
 
 /-!

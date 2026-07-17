@@ -147,6 +147,12 @@ f(Y) = Y^11 - Y^10 - 10Y^9 + 9Y^8 + 36Y^7 - 28Y^6
        - 56Y^5 + 35Y^4 + 35Y^3 - 15Y^2 - 6Y + 1.
 ```
 
+`BealRegular/TwentyThreeRealSubfield.lean` now kernel-checks the first field
+model layer: `K` is a CM field, `K⁺` has degree `11`, the element
+`a = -(ζ₂₃ + ζ₂₃⁻¹)` lies in `K⁺`, and the displayed polynomial vanishes at
+`a`.  Irreducibility/minimality, generation of `K⁺`, the ring-of-integers
+identification, and the PID certificates remain separate proof obligations.
+
 The dependency-free script
 `scripts/TwentyThreeRelativeClassNumber.mjs` checks the following exact
 integer arithmetic:
