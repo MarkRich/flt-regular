@@ -1,0 +1,6 @@
+import BealRegular.OddLValueAtZero
+
+#print axioms HurwitzZeta.hurwitzZetaOdd_apply_zero_eq_sinZeta_one_div_pi
+#print axioms ZMod.SinZetaOneSawtoothFormula
+#print axioms ZMod.LFunction_apply_zero_of_odd_of_sinZeta_one
+#print axioms DirichletCharacter.Odd.LFunction_apply_zero_of_sinZeta_one

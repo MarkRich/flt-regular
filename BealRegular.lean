@@ -22,6 +22,7 @@ import BealRegular.TwentyThreeRealSubfieldPID
 import BealRegular.TwentyThreeHasseUnitIndex
 import BealRegular.RelativeClassGroup
 import BealRegular.TwentyThreeRelativeClassNumberResultant
+import BealRegular.OddLValueAtZero
 import BealRegular.TwentyThreeAnalyticClassNumber
 import BealRegular.TwentyThreeRelativeClassNumber
 import FltRegular.SmallNumbers.SmallNumbers
