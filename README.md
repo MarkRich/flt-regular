@@ -96,10 +96,14 @@ finite weighted sum.  That sole input is the explicitly named proposition
 not installed as an axiom or instance.  `SawtoothFourier.lean` now proves the
 underlying conditionally convergent series in natural order: for `0 < x < 1`,
 the partial sums of `sin (2 * pi * k * x) / k` tend to
-`pi * (1 / 2 - x)`.  What remains at this endpoint is to identify Mathlib's
-analytically continued `HurwitzZeta.sinZeta x 1` with that natural-order limit.
-Even that identification would not by itself supply the cyclotomic
-Dedekind-zeta factorization or the finite product over all odd characters.
+`pi * (1 / 2 - x)`.  `SinZetaOne.lean` supplies the analytic endpoint: its
+generic Abelian boundary theorem identifies Mathlib's analytically continued
+`HurwitzZeta.sinZeta x 1` with that natural-order limit.  It proves
+`ZMod.SinZetaOneSawtoothFormula N` unconditionally for every nontrivial
+modulus, and therefore gives unconditional weighted-sum formulas for odd
+functions and odd Dirichlet characters at zero.  This closes the sine-zeta
+endpoint, but it does not supply the cyclotomic Dedekind-zeta factorization or
+the finite product over all odd characters.
 
 These analytic constants still do not by themselves prove regularity of `23`.
 The same missing bridge is also exposed in an integer class-number form in

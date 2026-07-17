@@ -1,0 +1,19 @@
+import BealRegular.SinZetaOne
+
+namespace Complex
+
+#print axioms tendsto_integral_partial_cpow_nhdsWithin_one
+#print axioms tendsto_LSeries_real_nhdsWithin_one_of_boundary_integral
+#print axioms boundary_integral_eq_of_tendsto_sum_div
+#print axioms tendsto_LSeries_real_nhdsWithin_one
+#print axioms norm_sum_sin_Icc_le
+#print axioms tendsto_sum_sin_Icc_div
+#print axioms tendsto_LSeries_sin_real_nhdsWithin_one
+
+end Complex
+
+#print axioms HurwitzZeta.sinZeta_one_eq_sawtooth
+#print axioms ZMod.sinZeta_one_eq_sawtooth
+#print axioms ZMod.sinZetaOneSawtoothFormula
+#print axioms ZMod.LFunction_apply_zero_of_odd
+#print axioms DirichletCharacter.Odd.LFunction_apply_zero_weighted_sum
