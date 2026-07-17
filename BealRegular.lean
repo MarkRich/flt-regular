@@ -24,6 +24,7 @@ import BealRegular.RelativeClassGroup
 import BealRegular.TwentyThreeRelativeClassNumberResultant
 import BealRegular.OddLValueAtZero
 import BealRegular.SawtoothFourier
+import BealRegular.SinZetaOne
 import BealRegular.TwentyThreeAnalyticClassNumber
 import BealRegular.TwentyThreeRelativeClassNumber
 import FltRegular.SmallNumbers.SmallNumbers
