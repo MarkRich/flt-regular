@@ -21,6 +21,13 @@ that Beal's conjecture is logically equivalent to its restriction to reduced
 signatures.  This is a reduction, not a proof of the conjecture: the infinite
 mixed families such as `(4, 5, 23)` and `(3, 7, 11)` remain to be settled.
 
+`BealRegular/GaussianCubeParametrization.lean` starts the reduced signature
+`(4, 4, 3)`.  For coprime `x, y` with `x^4 + y^4` odd, it proves that any
+equation `x^4 + y^4 = z^3` makes `x^2 + y^2 i` a Gaussian cube and derives
+the resulting coprime two-parameter coordinate identities.  This is only the
+parametrization layer: no infinite descent or final `(4, 4, 3)` nonexistence
+claim is made.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
