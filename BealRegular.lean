@@ -1,4 +1,5 @@
 import BealRegular.SignatureReduction
+import BealRegular.GaussianCubeParametrization
 import BealRegular.Nineteen
 import BealRegular.Seventeen
 import BealRegular.CubicIdealCertificate
