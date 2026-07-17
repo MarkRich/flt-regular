@@ -1,0 +1,18 @@
+import BealRegular.TwentyThreeRealSubfieldPrimeClassification
+
+namespace BealRegular.TwentyThreeRealSubfieldPrimeClassification
+
+#print axioms order_mod_twentyThree_eq_eleven_or_twentyTwo
+#print axioms betaPolynomialMod_monic
+#print axioms betaPolynomialMod_natDegree
+#print axioms betaFactor_mem_normalizedFactors
+#print axioms betaFactor_mem_monicFactorsMod
+#print axioms betaPrime_inertiaDeg
+#print axioms betaPrime_inertiaDeg_eq_eleven
+#print axioms prime_mem_exceptional_of_mod_eq_one
+#print axioms prime_mem_exceptional_of_mod_eq_twentyTwo
+#print axioms prime_mem_exceptional_or_betaPrime_norm_large
+#print axioms prime_mem_exceptional_or_exists_prime_norm_large
+#print axioms exists_prime_norm_large_of_not_exceptional
+
+end BealRegular.TwentyThreeRealSubfieldPrimeClassification

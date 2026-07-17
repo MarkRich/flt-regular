@@ -38,8 +38,35 @@ node scripts/validate_17_certificates.mjs
 node scripts/validate_19_certificates.mjs
 node scripts/validate_23_prime2_cube_certificate.mjs
 node scripts/validate_23_prime3_cube_certificate.mjs
+node scripts/validate_23_real_certificates.mjs \
+  scripts/certificates_23_real.json BealRegular
 node scripts/TwentyThreeDesignCount.mjs
 node scripts/TwentyThreeRelativeClassNumber.mjs
+
+generated_real_dir="$(mktemp -d)"
+trap 'rm -rf -- "$generated_real_dir"' EXIT
+node scripts/render_23_real_certificates.mjs \
+  scripts/certificates_23_real.json "$generated_real_dir"
+second_render="$(node scripts/render_23_real_certificates.mjs \
+  scripts/certificates_23_real.json "$generated_real_dir")"
+printf '%s\n' "$second_render"
+node - "$second_render" <<'NODE'
+const summary = JSON.parse(process.argv[2]);
+if (summary.changed !== 0) {
+  throw new Error(`renderer is not byte-idempotent: ${summary.changed} files changed`);
+}
+NODE
+node scripts/validate_23_real_certificates.mjs \
+  scripts/certificates_23_real.json "$generated_real_dir"
+while IFS= read -r generated; do
+  production="BealRegular/$(basename "$generated")"
+  if ! cmp -s "$generated" "$production"; then
+    echo "generated real-subfield certificate is stale: $production" >&2
+    exit 1
+  fi
+done < <(rg --files "$generated_real_dir" | sort)
+rm -rf -- "$generated_real_dir"
+trap - EXIT
 
 if [[ -x /opt/homebrew/bin/python3.11 ]]; then
   generated_two="$(mktemp)"

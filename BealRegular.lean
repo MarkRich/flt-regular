@@ -1,6 +1,7 @@
 import BealRegular.Nineteen
 import BealRegular.Seventeen
 import BealRegular.CubicIdealCertificate
+import BealRegular.PrincipalIdealCertificate
 import BealRegular.TwentyThreeBernoulli
 import BealRegular.TwentyThreeDesign
 import BealRegular.TwentyThreePrimeTwoCube
@@ -10,6 +11,11 @@ import BealRegular.TwentyThreeRealSubfield
 import BealRegular.TwentyThreeRealSubfieldEisenstein
 import BealRegular.TwentyThreeRealSubfieldPowerBasis
 import BealRegular.TwentyThreeRealSubfieldDiscriminant
+import BealRegular.TwentyThreeRealSubfieldRingOfIntegers
+import BealRegular.TwentyThreeRealCertificates
+import BealRegular.TwentyThreeRealSubfieldClassNumber
+import BealRegular.TwentyThreeRealSubfieldPrimeClassification
+import BealRegular.TwentyThreeRealSubfieldPID
 import FltRegular.SmallNumbers.SmallNumbers
 
 /-!

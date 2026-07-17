@@ -49,8 +49,20 @@ needed for their discriminants.
 `BealRegular/TwentyThreeRealSubfieldDiscriminant.lean` kernel-checks an exact
 ten-step Euclidean resultant certificate for discriminant `23^10` and combines
 it with the Eisenstein shift to prove that the generated order is the full ring
-of integers.  Class number one is the next remaining real-subfield obligation.
-The project does not assume
+of integers.  `TwentyThreeRealSubfieldRingOfIntegers.lean` transports both
+integral power bases to the canonical ring of integers, proves the field
+discriminant is `23^10`, and computes the exact Minkowski floor `900`.
+`TwentyThreeRealSubfieldPrimeClassification.lean` proves that every rational
+prime below that cutoff either has prime-ideal norm already above the cutoff or
+belongs to an exact thirteen-prime list.  The ramified prime `23` is principal,
+and twelve generated `TwentyThreeRealCertificate*.lean` modules check exact
+integer-polynomial certificates for the remaining primes.  Their composition
+in `TwentyThreeRealSubfieldPID.lean` proves unconditionally that the maximal
+real subfield is a PID and has class number one.
+
+This does not by itself prove regularity of `23`: the remaining compact-route
+obligation is the relative class-number or equivalent Kummer bridge for the
+full cyclotomic field.  The project does not assume
 Kummer's Bernoulli criterion or claim that the non-PID cyclotomic field is a
 PID.  See `TwentyThreeBernoulli.md` and `TwentyThreeDesign.md` for the explicit
 proof routes and remaining gap.
@@ -64,6 +76,8 @@ node scripts/validate_17_certificates.mjs
 node scripts/validate_19_certificates.mjs
 node scripts/validate_23_prime2_cube_certificate.mjs
 node scripts/validate_23_prime3_cube_certificate.mjs
+node scripts/validate_23_real_certificates.mjs
+node scripts/render_23_real_certificates.mjs
 ```
 
 The following readme has been shamelessly copied from the [Liquid Tensor Experiment](https://github.com/leanprover-community/lean-liquid/).
