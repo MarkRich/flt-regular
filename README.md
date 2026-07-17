@@ -75,6 +75,17 @@ positivity, or nonzero hypotheses are required; in particular, `A = 0` is
 permitted.  The theorems assume rather than derive `7 ∣ A`; they neither
 exclude that branch nor solve `(3, 5, 7)`.
 
+`BealRegular/Signature357CrossPrimeAdic.lean` treats two separate conditional
+placements.  In the assumed `5 ∣ B` branch, with only `A`--`B` and `B`--`C`
+coprimality, it proves `C = A^1429` modulo `3125`.  This theorem permits
+`B = 0`; indeed, `(A, B, C) = (1, 0, 1)` satisfies all of its premises.  In
+the separately assumed `7 ∣ C` branch, with only `A`--`C` and `B`--`C`
+coprimality, it proves `B + A^423537 = 0` modulo `823543`, as well as
+`B^14 = 1` modulo `49` and
+`B mod 49 ∈ {1, 6, 8, 13, 15, 20, 22, 27, 29, 34, 36, 41, 43, 48}`.
+Neither divisibility placement is derived or excluded, and these restrictions
+do not prove that the `(3, 5, 7)` signature has no solution.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
