@@ -1,3 +1,4 @@
+import BealRegular.SignatureReduction
 import BealRegular.Nineteen
 import BealRegular.Seventeen
 import BealRegular.CubicIdealCertificate
@@ -41,8 +42,9 @@ import FltRegular.SmallNumbers.SmallNumbers
 # Beal reductions backed by `flt-regular`
 
 This companion layer imports the proved regular-prime cases of Fermat's Last
-Theorem and applies them to equal exponents and to mixed exponents sharing a
-common divisor. It does not assert Beal's conjecture.
+Theorem, applies them to equal exponents and mixed exponents sharing a common
+divisor, and reduces arbitrary Beal signatures coordinatewise to exponents
+that are `4` or odd primes. It does not assert Beal's conjecture.
 -/
 
 namespace BealRegular

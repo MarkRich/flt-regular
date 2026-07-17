@@ -11,6 +11,17 @@ import BealRegular
 #print axioms fermatLastTheoremNineteen
 #print axioms isRegularPrime_twentyThree
 #print axioms fermatLastTheoremTwentyThree
+#print axioms BealRegular.SignatureReduction.IsReducedBealExponent
+#print axioms BealRegular.SignatureReduction.HasCommonPrimeFactor
+#print axioms BealRegular.SignatureReduction.BealConjecture
+#print axioms BealRegular.SignatureReduction.ReducedBealConjecture
+#print axioms BealRegular.SignatureReduction.IsReducedBealExponent.two_lt
+#print axioms BealRegular.SignatureReduction.exists_reduced_exponent_factorization
+#print axioms BealRegular.SignatureReduction.hasCommonPrimeFactor_powers_iff
+#print axioms BealRegular.SignatureReduction.hasCommonPrimeFactor_iff_gcd_ne_one
+#print axioms BealRegular.SignatureReduction.gcd_powers_eq_one_iff
+#print axioms BealRegular.SignatureReduction.exists_reduced_generalized_fermat
+#print axioms BealRegular.SignatureReduction.bealConjecture_iff_reducedBealConjecture
 #print axioms BealRegular.no_solution_of_flt_divides_exponents
 #print axioms BealRegular.no_solution_equal_exponent_regular_prime
 #print axioms BealRegular.no_solution_if_regular_prime_dvd_exponents
