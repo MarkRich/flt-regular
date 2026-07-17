@@ -283,7 +283,7 @@ assert(
 );
 
 console.log(JSON.stringify({
-  warning: "finite arithmetic only; the relative class-number formula and real-subfield PID proof are missing",
+  warning: "finite arithmetic only; Lean proves the real-subfield PID separately, while the relative class-number formula remains missing",
   conductor: Number(conductor),
   primitiveRoot: Number(primitiveRoot),
   characterSumPolynomialAscending: characterSumPolynomial.map(String),

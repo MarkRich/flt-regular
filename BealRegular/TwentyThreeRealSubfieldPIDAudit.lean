@@ -1,0 +1,9 @@
+import BealRegular.TwentyThreeRealSubfieldPID
+
+namespace BealRegular.TwentyThreeRealSubfieldPID
+
+#print axioms one_prime_above_minkowski
+#print axioms ringOfIntegers_isPrincipalIdealRing
+#print axioms maximalRealSubfield_classNumber_eq_one
+
+end BealRegular.TwentyThreeRealSubfieldPID

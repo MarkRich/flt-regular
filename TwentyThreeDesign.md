@@ -158,8 +158,15 @@ power bases for `a` and its Eisenstein translate and proves a reusable
 norm-resultant identity.  `TwentyThreeRealSubfieldDiscriminant.lean` checks an
 exact normalized polynomial-remainder sequence, proves both the rational and
 integral discriminants are `23^10`, and uses the Eisenstein cancellation
-theorem to identify the generated order with the full integral closure.  The
-class-number-one certificates remain a separate proof obligation.
+theorem to identify the generated order with the full integral closure.
+`TwentyThreeRealSubfieldRingOfIntegers.lean` transports the power bases to the
+canonical ring of integers and proves the exact Minkowski floor `900`.
+`TwentyThreeRealSubfieldPrimeClassification.lean` uses Kummer--Dedekind and the
+quadratic tower into the full cyclotomic field to reduce that bound to the
+ramified prime and twelve split primes.  Exact generated polynomial
+certificates prove one selected prime above each split prime principal, and
+`TwentyThreeRealSubfieldPID.lean` composes the finite classification to prove
+that the real ring of integers is a PID and that `h(K⁺) = 1`.
 
 The dependency-free script
 `scripts/TwentyThreeRelativeClassNumber.mjs` checks the following exact
@@ -209,8 +216,10 @@ CODEX_WORK_TAG=twenty-three-relative node --title=work:twenty-three-relative \
   scripts/TwentyThreeRelativeClassNumber.mjs
 ```
 
-These computations do **not** prove either class number. The missing
-cyclotomic relative class-number formula is the theorem which would identify
+The dependency-free computations alone do **not** prove either class number.
+The Lean modules described above now prove `h(K⁺) = 1` independently.  The
+remaining missing cyclotomic relative class-number formula is the theorem
+which would identify
 
 ```text
 |Res(T^11 + 1, A(T))| / 46^10
@@ -218,11 +227,10 @@ cyclotomic relative class-number formula is the theorem which would identify
 
 with the relative class number `h⁻(K) = h(K) / h(K⁺)`. Once that theorem is
 available, the checked resultant reduces `h⁻(K) = 3` to integer arithmetic.
-An unconditional full proof along this route would still need:
-
-1. principal-ideal certificates above the twelve displayed unramified primes
-   and the ramified prime `23`, to prove `h(K⁺) = 1`;
-2. the relative class-number formula itself. Mathlib has useful ingredients
+The principal-ideal certificates above all twelve displayed unramified primes
+and the ramified prime `23` are complete and prove `h(K⁺) = 1`.  An
+unconditional full proof along this route still needs the relative
+class-number formula itself. Mathlib has useful ingredients
    (`NumberField.DedekindZeta`, the CM-field regulator ratio, cyclotomic
    Dirichlet characters, functional equations, Gauss sums, and resultants),
    but it does not currently assemble them into this formula.
@@ -292,11 +300,11 @@ The preferred research route is:
    cubes to one, and a proven surjection onto the class group.  Only the
    surjection and exponent-three relations are needed; independence and exact
    cardinality are not.
-3. Develop the real-subfield/relative-class-number route above as an
-   independent exact-class-number program: thirteen real-subfield ideal
-   certificates plus the currently missing relative class-number formula.
-   The dependency-free script fixes its finite target data but proves neither
-   missing bridge.
+3. Continue the real-subfield/relative-class-number route above as an
+   independent exact-class-number program.  The thirteen real-subfield ideal
+   branches and `h(K⁺) = 1` are now Lean theorems; the relative class-number
+   formula is the remaining bridge.  The dependency-free script fixes its
+   exact target arithmetic but does not prove that formula.
 4. If no compact unconditional presentation is available, formalize Kummer's
    Bernoulli criterion as a separate theorem.  The finite side is now complete:
    `TwentyThreeBernoulli.lean` kernel-computes `B_2` through `B_20`, their
