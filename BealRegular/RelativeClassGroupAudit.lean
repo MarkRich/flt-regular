@@ -1,0 +1,10 @@
+import BealRegular.RelativeClassGroup
+
+namespace BealRegular.RelativeClassGroup
+
+#print axioms extendedClassGroup_range_eq_bot_of_classNumber_eq_one
+#print axioms extendedClassIndex_eq_classNumber_of_classNumber_eq_one
+#print axioms card_extendedClassQuotient_eq_extendedClassIndex
+#print axioms extendedClassIndex_mul_card_extendedRange
+
+end BealRegular.RelativeClassGroup

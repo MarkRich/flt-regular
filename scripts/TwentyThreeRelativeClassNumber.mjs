@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 // Verify the exact finite arithmetic behind the proposed relative-class-number
-// route for Q(zeta_23). This script is research evidence only: it does not
-// prove the relative class-number formula, a PID theorem for the maximal real
-// subfield, or any Lean declaration.
+// route for Q(zeta_23). This script is an independent arithmetic check only:
+// Lean separately proves the maximal-real-subfield PID and the same resultant,
+// while the relative class-number formula itself remains unproved.
 
 const assert = (condition, message) => {
   if (!condition) throw new Error(message);

@@ -1,0 +1,8 @@
+import BealRegular.TwentyThreeRelativeClassNumberResultant
+
+namespace BealRegular.TwentyThreeRelativeClassNumberResultant
+
+#print axioms characterSumPolynomial_resultant
+#print axioms normalizedCharacterSumProduct
+
+end BealRegular.TwentyThreeRelativeClassNumberResultant
