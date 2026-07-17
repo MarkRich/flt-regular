@@ -78,6 +78,16 @@ then kernel-checks an exact polynomial remainder certificate for
 of the primitive residue `5` modulo `23`.  The independent Node checker reaches
 the same integer by fraction-free determinant arithmetic.
 
+`TwentyThreeOddCharacterProduct.lean` now connects that exact resultant to the
+analytic special values.  It kernel-checks that the powers of `5` enumerate
+the nonzero residues modulo `23`, identifies each residue-weighted character
+sum with `S(chi(5))`, and proves that the eleven values `chi(5)` for odd
+characters are exactly the roots of `X^11 + 1`.  Together with the
+unconditional `L(chi, 0)` formula from `SinZetaOne.lean`, this proves
+`prod_(chi odd) L(chi, 0) = 3 * 2^10 / 23`, or equivalently that the normalized
+finite product is exactly `3`.  This closes the finite odd-character product,
+but does not prove the global Dedekind-zeta/Dirichlet-`L` factorization.
+
 `TwentyThreeAnalyticClassNumber.lean` now specializes the analytic class-number
 formula on both fields and cancels every known signature, torsion,
 discriminant, real-subfield class-number, and CM-regulator constant.  It proves
@@ -124,8 +134,9 @@ generic Abelian boundary theorem identifies Mathlib's analytically continued
 `ZMod.SinZetaOneSawtoothFormula N` unconditionally for every nontrivial
 modulus, and therefore gives unconditional weighted-sum formulas for odd
 functions and odd Dirichlet characters at zero.  This closes the sine-zeta
-endpoint, but it does not supply the cyclotomic Dedekind-zeta factorization or
-the finite product over all odd characters.
+endpoint.  `TwentyThreeOddCharacterProduct.lean` uses those values to compute
+the finite product over all odd characters; the cyclotomic Dedekind-zeta
+factorization remains separate.
 
 These analytic constants still do not by themselves prove regularity of `23`.
 The same missing bridge is also exposed in an integer class-number form in
