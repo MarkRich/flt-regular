@@ -5,6 +5,7 @@ import BealRegular.GaussianQuarticThreeBridge
 import BealRegular.FourthPowerSumDivisibility
 import BealRegular.Signature357Residues
 import BealRegular.Signature357PrimePower
+import BealRegular.Signature357FiveAdic
 import BealRegular.Nineteen
 import BealRegular.Seventeen
 import BealRegular.CubicIdealCertificate

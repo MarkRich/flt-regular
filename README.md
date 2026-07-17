@@ -58,6 +58,14 @@ it proves congruences modulo `8`, `32`, or `128`.  The statements allow zero
 bases, do not assert that any particular branch occurs, exclude no branch,
 and do not solve the `(3, 5, 7)` signature.
 
+`BealRegular/Signature357FiveAdic.lean` treats another conditional branch.
+Assuming `5 ∣ C`, `A` coprime to `C`, and `B` coprime to `C` in
+`A^3 + B^5 = C^7`, it proves `A^12500 = 1` modulo `78125`, together with the
+readable consequences `A^4 = 1` modulo `25` and
+`A mod 25 ∈ {1, 7, 18, 24}`.  No coprimality between `A` and `B`, positivity,
+or nonzero hypotheses are required.  This does not prove that the `5 ∣ C`
+branch occurs or that it is impossible, and it does not solve `(3, 5, 7)`.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
