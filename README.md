@@ -78,8 +78,18 @@ then kernel-checks an exact polynomial remainder certificate for
 of the primitive residue `5` modulo `23`.  The independent Node checker reaches
 the same integer by fraction-free determinant arithmetic.
 
-This still does not by itself prove regularity of `23`.  The sole remaining
-compact-route theorem is exposed honestly in
+`TwentyThreeAnalyticClassNumber.lean` now specializes the analytic class-number
+formula on both fields and cancels every known signature, torsion,
+discriminant, real-subfield class-number, and CM-regulator constant.  It proves
+that the explicitly scaled Dedekind-zeta residue ratio is exactly `h / Q`,
+where `h` is the cyclotomic class number and `Q` is the Hasse unit index.  Since
+`TwentyThreeHasseUnitIndex.lean` proves `Q = 1`, the remaining odd-character
+factorization is exposed as the proposition
+`OddCharacterAnalyticBridgeTwentyThree`; if supplied, Lean proves `h = 3`,
+regularity of `23`, and FLT for exponent `23`.
+
+These analytic constants still do not by themselves prove regularity of `23`.
+The same missing bridge is also exposed in an integer class-number form in
 `TwentyThreeRelativeClassNumber.lean` as
 `RelativeClassNumberFormulaTwentyThree`: it must identify the relative class
 number with the normalized odd-character product already computed to `3`.
