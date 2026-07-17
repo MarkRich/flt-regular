@@ -1,0 +1,28 @@
+import BealRegular.TwentyThreeOddCharacterAnalyticBridge
+
+namespace BealRegular.TwentyThreeOddCharacterAnalyticBridge
+
+#print axioms GlobalFactorizationTwentyThree
+#print axioms oddCharacter_isPrimitive
+#print axioms inv_odd
+#print axioms gaussSum_mul_gaussSum_inv_eq_neg_twentyThree
+#print axioms twentyThree_cpow_half_sq
+#print axioms rootNumber_mul_inv_eq_one
+#print axioms odd_iff_inv_odd
+#print axioms prod_inv_rootNumber_eq_prod_rootNumber
+#print axioms prod_odd_rootNumber_sq_eq_one
+#print axioms GammaReal_two
+#print axioms odd_LFunction_zero_eq_rootNumber_mul_LFunction_inv_one
+#print axioms prod_inv_LFunction_one_eq_prod_LFunction_one
+#print axioms prod_odd_LFunction_zero_functional_equation
+#print axioms oddCharacter_ne_one
+#print axioms tendsto_prod_odd_LFunction_one
+#print axioms dedekindZeta_residue_ratio_eq_prod_odd_LFunction_one
+#print axioms twentyThree_cpow_half_eq_sqrt
+#print axioms prod_odd_rootNumber_eq_one
+#print axioms oddCharacterAnalyticBridgeTwentyThree_of_globalFactorization
+#print axioms classNumber_eq_three_of_globalFactorization
+#print axioms isRegularPrime_twentyThree_of_globalFactorization
+#print axioms fermatLastTheoremTwentyThree_of_globalFactorization
+
+end BealRegular.TwentyThreeOddCharacterAnalyticBridge

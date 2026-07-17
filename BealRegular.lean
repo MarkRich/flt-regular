@@ -29,6 +29,7 @@ import BealRegular.DedekindZetaEulerFoundations
 import BealRegular.TwentyThreeAnalyticClassNumber
 import BealRegular.TwentyThreeLocalEulerFactors
 import BealRegular.TwentyThreeOddCharacterProduct
+import BealRegular.TwentyThreeOddCharacterAnalyticBridge
 import BealRegular.TwentyThreeRelativeClassNumber
 import FltRegular.SmallNumbers.SmallNumbers
 
