@@ -98,6 +98,18 @@ factorization is exposed as the proposition
 `OddCharacterAnalyticBridgeTwentyThree`; if supplied, Lean proves `h = 3`,
 regularity of `23`, and FLT for exponent `23`.
 
+`TwentyThreeOddCharacterAnalyticBridge.lean` sharpens that remaining boundary
+to the explicitly defined proposition `GlobalFactorizationTwentyThree`: on
+`Re(s) > 1`, the cyclotomic Dedekind zeta function factors as the maximal-real
+subfield zeta function times the product of the eleven odd Dirichlet
+`L`-series.  The module proves the primitive-character and root-number lemmas,
+the individual and finite-product functional equations, and the residue-limit
+argument.  Under that one proposition, positivity forces the total root
+number to be `+1`, the existing analytic bridge follows, and Lean obtains
+class number `3`, regularity of `23`, and FLT for exponent `23`.  The module
+does not establish `GlobalFactorizationTwentyThree`; proving that proposition
+is still the open formalization step.
+
 `TwentyThreeLocalEulerFactors.lean` proves the finite algebraic local-factor
 calculation away from `23`.  It defines the eleven odd Dirichlet characters
 modulo `23`, proves that a nonzero residue has order `1`, `2`, `11`, or `22`,
