@@ -38,11 +38,15 @@ rational primes remain on that brute-force route.
 `BealRegular/TwentyThreeRealSubfield.lean` begins the compact alternative: it
 proves that the maximal real subfield has degree `11`, constructs
 `-(zeta_23 + zeta_23^-1)` inside it, and checks that the displayed monic
-degree-11 polynomial vanishes there.  It does not yet prove irreducibility,
-identify the ring of integers, or prove class number one.  The project does
-not assume Kummer's Bernoulli criterion or claim that the non-PID cyclotomic
-field is a PID.  See `TwentyThreeBernoulli.md` and `TwentyThreeDesign.md` for
-the explicit proof routes and remaining gap.
+degree-11 polynomial vanishes there.
+`BealRegular/TwentyThreeRealSubfieldEisenstein.lean` proves the shifted
+polynomial is `23`-Eisenstein, transports irreducibility back to the original
+polynomial, identifies it with the minimal polynomial over `ℚ`, and proves the
+explicit element generates the full real subfield.  This does not yet identify
+the ring of integers or prove class number one.  The project does not assume
+Kummer's Bernoulli criterion or claim that the non-PID cyclotomic field is a
+PID.  See `TwentyThreeBernoulli.md` and `TwentyThreeDesign.md` for the explicit
+proof routes and remaining gap.
 
 Useful verification commands are:
 

@@ -7,6 +7,7 @@ import BealRegular.TwentyThreePrimeTwoCube
 import BealRegular.TwentyThreePrimeThreeCube
 import BealRegular.TwentyThreeRamifiedPrime
 import BealRegular.TwentyThreeRealSubfield
+import BealRegular.TwentyThreeRealSubfieldEisenstein
 import FltRegular.SmallNumbers.SmallNumbers
 
 /-!
