@@ -7,7 +7,7 @@ public import Mathlib.RingTheory.Ideal.Norm.AbsNorm
 /-!
 # Foundations for the Dedekind-zeta Euler product
 
-This file supplies two generic ingredients for a future Euler-product proof.
+This file supplies two generic ingredients for the downstream Euler-product proof.
 First, unique factorization of nonzero ideals in a Dedekind domain is packaged
 as an equivalence with finite multisets of height-one prime ideals, including
 the corresponding norm-product and fixed-norm coefficient identities. Second,
@@ -15,10 +15,10 @@ the ideal-count Dirichlet series defining a number field's Dedekind zeta
 function is shown to be absolutely summable, and to sum to `dedekindZeta`, on
 the half-plane `Re(s) > 1`.
 
-This does not yet construct the infinite Euler product. In particular, the
-missing step is a justified `HasProd` grouping of all finite prime-ideal
-multisets into the product of the prime-indexed geometric series. No global
-Dedekind-zeta factorization or analytic-continuation argument is claimed here.
+This file itself does not construct the infinite Euler product.  That grouping
+is proved in `MultisetEulerProduct` and specialized to number fields in
+`DedekindZetaEulerProduct`.  No cyclotomic factorization into Dirichlet
+`L`-functions or analytic-continuation argument is claimed here.
 -/
 
 @[expose] public section

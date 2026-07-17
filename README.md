@@ -118,19 +118,24 @@ and computes the corresponding odd-character Euler polynomials as
 matching cyclotomic/real-subfield denominator identities and applies them
 directly to every rational prime `q != 23`, together with the full cyclotomic
 splitting-count formula.  These are local polynomial identities only: they do
-not prove the global Dedekind-zeta factorization.  The ramified local factor at
-`q = 23`, a Dedekind-zeta Euler-product theorem, and the analytic or
-meromorphic continuation step still remain.
+not prove the global cyclotomic/real-subfield/odd-character factorization.  The
+ramified local identification at `q = 23`, the assembly of those specialized
+local identities, and the analytic or meromorphic continuation step still
+remain.
 
-`DedekindZetaEulerFoundations.lean` supplies generic foundations for the next
-Euler-product step.  It identifies nonzero ideals in any Dedekind domain with
-finite multisets of height-one prime ideals, proves the corresponding ideal-
-norm product and fixed-norm coefficient formulas, and proves that the
-Dedekind-zeta ideal-count Dirichlet series is absolutely summable and has sum
-`dedekindZeta` on `Re(s) > 1`.  It still does not construct the infinite Euler
-product: the infinite-multiset/geometric-series `HasProd` grouping over all
-prime ideals remains missing.  Consequently this module does not yet prove a
-global Dedekind-zeta factorization or its continuation beyond that half-plane.
+`DedekindZetaEulerFoundations.lean` identifies nonzero ideals in any Dedekind
+domain with finite multisets of height-one prime ideals, proves the
+corresponding norm-product and fixed-norm coefficient formulas, and proves
+absolute summability of the ideal-count Dirichlet series on `Re(s) > 1`.
+`MultisetEulerProduct.lean` supplies the missing analytic grouping theorem for
+a free commutative monoid.  `DedekindZetaEulerProduct.lean` combines them to
+prove unconditionally that, for every number field and `Re(s) > 1`,
+`dedekindZeta` is the convergent product of its prime-ideal geometric factors.
+It also groups those factors by the rational prime below them and identifies
+each fiber with Mathlib's finite `primesOver (span {q})` type.  This closes the
+generic Euler-product step only: it does not prove the specialized
+cyclotomic/real/odd-character local-factor identity, the ramified factor at
+`23`, or any continuation beyond the half-plane of absolute convergence.
 
 `OddLValueAtZero.lean` now proves unconditionally that the odd Hurwitz zeta
 value at zero is `sinZeta a 1 / pi`.  Given one pointwise Fourier endpoint, it

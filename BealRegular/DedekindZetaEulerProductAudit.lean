@@ -1,0 +1,22 @@
+import BealRegular.DedekindZetaEulerProduct
+
+/-! Kernel axiom audit for the unconditional Dedekind-zeta Euler product. -/
+
+namespace BealRegular.DedekindZetaEulerProduct
+
+#print axioms dedekindPrimeIdealEulerFactor
+#print axioms dedekindZeta_eulerProduct_hasProd
+#print axioms rationalPrimeBelow
+#print axioms rationalPrimeIdeal_asIdeal_eq_span
+#print axioms rationalPrimeBelow_fiber_under_eq_span
+#print axioms rationalFiberToPrimesOverSpan
+#print axioms rationalFiberToPrimesOverSpan_apply
+#print axioms rationalFiberToPrimesOverSpan_injective
+#print axioms rationalFiberToPrimesOverSpan_surjective
+#print axioms rationalFiberEquivPrimesOverSpan
+#print axioms rationalFiberEquivPrimesOverSpan_apply
+#print axioms rationalPrimeBelow_finite_fiber
+#print axioms dedekindRationalLocalFactor
+#print axioms dedekindZeta_rationalEulerProduct_hasProd
+
+end BealRegular.DedekindZetaEulerProduct
