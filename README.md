@@ -9,8 +9,17 @@ every equal exponent `3 <= n <= 23`.  Composite exponents are reduced to the
 formal FLT theorems at `3`, `4`, `5`, `7`, `11`, `13`, `17`, `19`, or `23`.
 The same reduction excludes a mixed-power equation whenever an integer from
 `3` through `23` divides all three exponents.  This is a genuine unconditional
-FLT23 milestone, but it does not prove Beal's conjecture: general mixed
-exponent signatures remain outside this common-divisor reduction.
+FLT23 milestone, but that common-divisor result alone does not prove Beal's
+conjecture.
+
+`BealRegular/SignatureReduction.lean` now proves the exact coordinatewise
+normalization: every exponent greater than two is a positive multiple of `4`
+or of an odd prime.  It transforms any nonzero natural-number solution into a
+solution with each exponent in that reduced family, while preserving exactly
+the existence of one prime dividing all three bases.  Consequently Lean proves
+that Beal's conjecture is logically equivalent to its restriction to reduced
+signatures.  This is a reduction, not a proof of the conjecture: the infinite
+mixed families such as `(4, 5, 23)` and `(3, 7, 11)` remain to be settled.
 
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
