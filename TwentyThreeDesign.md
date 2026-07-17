@@ -150,8 +150,11 @@ f(Y) = Y^11 - Y^10 - 10Y^9 + 9Y^8 + 36Y^7 - 28Y^6
 `BealRegular/TwentyThreeRealSubfield.lean` now kernel-checks the first field
 model layer: `K` is a CM field, `K⁺` has degree `11`, the element
 `a = -(ζ₂₃ + ζ₂₃⁻¹)` lies in `K⁺`, and the displayed polynomial vanishes at
-`a`.  Irreducibility/minimality, generation of `K⁺`, the ring-of-integers
-identification, and the PID certificates remain separate proof obligations.
+`a`.  `BealRegular/TwentyThreeRealSubfieldEisenstein.lean` checks that shifting
+by `X - 2` gives a `23`-Eisenstein polynomial, proves irreducibility over `ℤ`
+and `ℚ`, identifies the polynomial with `minpoly ℚ a`, and proves that `a`
+generates `K⁺`.  The ring-of-integers identification, discriminant bridge, and
+PID certificates remain separate proof obligations.
 
 The dependency-free script
 `scripts/TwentyThreeRelativeClassNumber.mjs` checks the following exact
