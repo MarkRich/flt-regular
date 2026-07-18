@@ -109,6 +109,18 @@ may be entirely vacuous when no base is divisible by `3`.  Their natural-number
 scope includes `(A, B, C) = (0, 1, 1)` and `(1, 0, 1)`.  No branch is derived
 or excluded, and no nonexistence result for `(3, 5, 7)` follows.
 
+`BealRegular/Signature357LocalRatio.lean` formalizes the forward local-ratio
+valuation profile for positive pairwise-coprime identities
+`A^3 + B^5 = C^7`.  Using the paper's variable map `x = B`, `y = A`,
+`z = C`, it sets `eta = B^5/C^7` and proves
+that, for every prime, the valuation pair `(v(eta), v(1-eta))` has one of the
+four shapes `(0, 0)`, `(5k, 0)`, `(0, 3k)`, or `(-7k, -7k)`, with `k > 0`
+in the latter three cases.  Mathlib defines `padicValRat p 0 = 0`, so the
+quotient formulas carry explicit nonzero hypotheses and the main profile uses
+positive bases.  This is a forward valuation statement only: it gives no
+converse or local-algebra classification, proves no nonexistence result, and
+does not settle the full Beal conjecture.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates

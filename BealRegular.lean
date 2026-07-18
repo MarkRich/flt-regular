@@ -10,6 +10,7 @@ import BealRegular.Signature357SevenAdic
 import BealRegular.Signature357CrossPrimeAdic
 import BealRegular.Signature357RemainingPrimeBranches
 import BealRegular.Signature357CompositeLocal
+import BealRegular.Signature357LocalRatio
 import BealRegular.Nineteen
 import BealRegular.Seventeen
 import BealRegular.CubicIdealCertificate
