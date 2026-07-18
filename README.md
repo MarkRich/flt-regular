@@ -98,6 +98,17 @@ conditions only; they do not assert that any listed residue pair is realized.
 Neither divisibility placement is derived or excluded, and no nonexistence
 result for `(3, 5, 7)` follows.
 
+`BealRegular/Signature357CompositeLocal.lean` gives three-adic restrictions
+for pairwise-coprime natural identities `A^3 + B^5 = C^7`.  Its main table
+packages three implications: assuming `3 ∣ A` gives `B = C^5` modulo `27`;
+assuming `3 ∣ B` gives `C = A^93` modulo `243`; and assuming `3 ∣ C` gives
+`B + A^33 = 0` modulo `243`.  A second table gives corresponding `±1`
+coordinate restrictions modulo `9` in the latter two branches.  The tables do
+not derive any divisibility premise, are not an exhaustive branch split, and
+may be entirely vacuous when no base is divisible by `3`.  Their natural-number
+scope includes `(A, B, C) = (0, 1, 1)` and `(1, 0, 1)`.  No branch is derived
+or excluded, and no nonexistence result for `(3, 5, 7)` follows.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
