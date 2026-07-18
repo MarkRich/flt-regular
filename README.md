@@ -171,6 +171,15 @@ polynomials themselves: they do not identify an original fiber quotient with
 a product of model quotients, prove structural stability or a Newton-polygon
 theorem, classify valuation ramification, exclude `(3, 5, 7)`, or prove Beal.
 
+`BealRegular/Signature357ModelFactorAlgebras.lean` packages the `psi`, `Psi`,
+and normalized binomial quotients.  The fixed quotients have dimensions two
+and four.  A positive-degree binomial quotient is module-finite with dimension
+`n`; when its parameter is nonzero it is also finite etale over the coefficient
+field.  This is algebraic-geometric `Algebra.Etale`: the results do not claim
+that the quotients are fields, identify an original fiber quotient with their
+product, prove structural stability or integral-model etaleness, or classify
+valuation-theoretic ramification.
+
 `BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
 remainder theorem at the exact critical parameters.  The `u = 0` quotient is
 the product of the quadratic `psi` quotient and the `X^5` primary quotient.
