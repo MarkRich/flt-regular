@@ -162,6 +162,16 @@ prove structural stability, quotient-product isomorphisms, Newton-polygon or
 valuation-ramification results, `(3, 5, 7)` nonexistence, or the full Beal
 conjecture.
 
+`BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
+remainder theorem at the exact critical parameters.  The `u = 0` quotient is
+the product of the quadratic `psi` quotient and the `X^5` primary quotient.
+After translation by one, the `u = 1` quotient is the product of the quartic
+`Psi` quotient and the `X^3` primary quotient; the module also transports this
+decomposition back to the original variable.  These fibers are nonreduced
+critical limits.  No theorem identifies a nearby `q != 0` p-adic fiber with
+these products, proves structural stability or a Newton-polygon result,
+classifies valuation ramification, excludes `(3, 5, 7)`, or settles Beal.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
