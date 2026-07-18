@@ -15,6 +15,7 @@ import BealRegular.Signature357PolynomialBridge
 import BealRegular.Signature357GenericLocalPolynomial
 import BealRegular.Signature357LocalAlgebra
 import BealRegular.Signature357BranchNormalForms
+import BealRegular.Signature357ModelFactorInvariants
 import BealRegular.Signature357CriticalFiberDecomposition
 import BealRegular.Nineteen
 import BealRegular.Seventeen

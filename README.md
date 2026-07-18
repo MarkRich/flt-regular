@@ -162,6 +162,15 @@ prove structural stability, quotient-product isomorphisms, Newton-polygon or
 valuation-ramification results, `(3, 5, 7)` nonexistence, or the full Beal
 conjecture.
 
+`BealRegular/Signature357ModelFactorInvariants.lean` computes the exact
+degrees, discriminants, and separability of `psi`, `Psi`, and the normalized
+cubic, quintic, and septic binomial factors used in the local models.  In
+particular, the two critical separable factors have discriminants `-35` and
+`3^3 * 5^2 * 7^3`.  The binomial results concern the displayed model
+polynomials themselves: they do not identify an original fiber quotient with
+a product of model quotients, prove structural stability or a Newton-polygon
+theorem, classify valuation ramification, exclude `(3, 5, 7)`, or prove Beal.
+
 `BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
 remainder theorem at the exact critical parameters.  The `u = 0` quotient is
 the product of the quadratic `psi` quotient and the `X^5` primary quotient.
