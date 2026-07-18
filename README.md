@@ -153,6 +153,15 @@ decomposition, structural-stability or Newton-polygon result, local
 ramification classification, `(3, 5, 7)` nonexistence theorem, or full Beal
 claim.
 
+`BealRegular/Signature357BranchNormalForms.lean` names the quadratic `psi` and
+quartic `Psi` factors from Dahmen--Siksek equation (8) and proves the exact
+fifth-power, translated cubic, and inverse-scaled seventh-power normal forms
+used before Proposition 3.3.  The identities hold over every field; the paper
+uses them with `q = p^r` over `Q_p`.  They are algebraic inputs only and do not
+prove structural stability, quotient-product isomorphisms, Newton-polygon or
+valuation-ramification results, `(3, 5, 7)` nonexistence, or the full Beal
+conjecture.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
