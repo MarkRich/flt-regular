@@ -133,6 +133,16 @@ base change.  They do not yet prove a `Q_p` local-algebra isomorphism,
 ramification classification, or separability theorem, and they prove no
 nonexistence result for `(3, 5, 7)` or the full Beal conjecture.
 
+`BealRegular/Signature357GenericLocalPolynomial.lean` transports that bridge
+to every characteristic-zero field and links it directly to the canonical
+rational `phi`.  For every parameter `u`, it proves the same resultant and
+discriminant formulas; for `u != 0, 1`, it proves polynomial separability and
+squarefreeness, preserved by every field extension.  It includes the explicit
+discriminant and separability statements over each p-adic field `Q_p`.  These
+are polynomial and scalar-extension results only: they do not construct or
+classify the quotient algebra, prove finite etaleness or ramification facts,
+analyze Newton polygons, exclude a `(3, 5, 7)` solution, or settle Beal.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
