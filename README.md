@@ -121,6 +121,18 @@ positive bases.  This is a forward valuation statement only: it gives no
 converse or local-algebra classification, proves no nonexistence result, and
 does not settle the full Beal conjecture.
 
+`BealRegular/Signature357PolynomialBridge.lean` formalizes the rational
+specialization of Dahmen--Siksek's degree-seven polynomial
+`phi(t) = 15t^7 - 35t^6 + 21t^5`.  It proves the exact factorizations at the
+critical values `0` and `1`, the derivative identity
+`phi'(t) = 105t^4(t-1)^2`, and the factorized resultant with `phi - eta`.
+It then proves their discriminant formula
+`disc(phi-eta) = -3^6 5^6 7^7 eta^4(eta-1)^2`, including nonvanishing when
+`eta != 0, 1`.  These are rational polynomial identities suitable for later
+base change.  They do not yet prove a `Q_p` local-algebra isomorphism,
+ramification classification, or separability theorem, and they prove no
+nonexistence result for `(3, 5, 7)` or the full Beal conjecture.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
