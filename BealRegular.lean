@@ -13,6 +13,7 @@ import BealRegular.Signature357CompositeLocal
 import BealRegular.Signature357LocalRatio
 import BealRegular.Signature357PolynomialBridge
 import BealRegular.Signature357GenericLocalPolynomial
+import BealRegular.Signature357LocalAlgebra
 import BealRegular.Nineteen
 import BealRegular.Seventeen
 import BealRegular.CubicIdealCertificate

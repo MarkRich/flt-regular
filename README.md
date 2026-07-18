@@ -143,6 +143,16 @@ are polynomial and scalar-extension results only: they do not construct or
 classify the quotient algebra, prove finite etaleness or ramification facts,
 analyze Newton polygons, exclude a `(3, 5, 7)` solution, or settle Beal.
 
+`BealRegular/Signature357LocalAlgebra.lean` packages the canonical quotient
+`K[X]/(phi-u)`.  Every fiber has a power basis and vector-space dimension
+exactly seven.  If `u != 0, 1`, the quotient is reduced, module-finite, and
+etale over `K`; the same statements are exposed explicitly over every p-adic
+field `Q_p`.  This algebraic-geometric etaleness statement is not the paper's
+valuation-theoretic unramified classification.  The module proves no product
+decomposition, structural-stability or Newton-polygon result, local
+ramification classification, `(3, 5, 7)` nonexistence theorem, or full Beal
+claim.
+
 The regular-prime results at `17` and `19` are proved here by exact cyclotomic
 PID certificates, not by assuming their class numbers.  Sage was used only to
 discover the integer-polynomial witnesses.  Lean checks all `103` certificates
