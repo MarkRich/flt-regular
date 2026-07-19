@@ -223,6 +223,14 @@ nonzero root scaling identifies the original factor algebra over `ℚ_[p]`
 with the fixed binomial model algebra.  The generic result assumes, rather
 than proves, the required residual equality.
 
+`BealRegular/Signature357ZeroBranchDescaledModel.lean` proves that residual
+equality for the zero branch.  Substitution by `X ↦ qX` and cancellation of
+the common `q^5` identify the integral quintic descale modulo `p` with
+`X^5 - 21⁻¹a`.  If `a` is a p-adic unit, the original scaled quintic
+adjoin-root algebra over `ℚ_[p]` is therefore equivalent to the fixed
+binomial model algebra.  This abstract algebra equivalence does not classify
+ramification, exclude signature `(3,5,7)`, or prove Beal's conjecture.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to
