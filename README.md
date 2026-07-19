@@ -300,9 +300,13 @@ does not classify the global etale algebra or its number-field summands.
 The real derivative of `phi` is `105 x^4 (x-1)^2`; a three-interval argument
 at the isolated critical points proves that `phi` is strictly increasing.
 Its odd degree and positive leading coefficient make it surjective, so every
-real fiber `phi(X)-u` has exactly one real root.  This is the real-root core of
-the expected `ℝ × ℂ^3` algebra signature, but the explicit algebra equivalence
-and its factor bookkeeping remain separate steps.
+real fiber `phi(X)-u` has exactly one real root.  For the nonsingular parameters
+`u ≠ 0, 1`, `BealRegular/Signature357RealAlgebra.lean` combines this with
+separability, real polynomial factorization, and the Chinese remainder theorem
+to prove the full real algebra signature `ℝ × ℂ^3`; a base-change theorem then
+states this directly for the scalar extension to `ℝ` of every noncritical
+rational fiber.  This archimedean result does not determine the degrees or
+discriminants of the global number-field summands.
 
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
