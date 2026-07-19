@@ -252,6 +252,14 @@ ring are supported.  The module does not verify a signature-specific residual
 identity, establish formal etaleness, or apply adic rigidity to identify a
 lifted factor with a fixed model algebra.
 
+`BealRegular/AdjoinRootBaseChange.lean` packages scalar extension in the other
+direction: tensoring an adjoin-root algebra with a new coefficient ring is
+equivalent to adjoining a root of the coefficientwise mapped polynomial.  An
+algebra equivalence between two base-ring adjoin-root algebras therefore
+extends to the new coefficient ring.  The module records its exact action on
+canonical base-ring elements and roots; the transported equivalence is not
+claimed to preserve roots unless the original equivalence does.
+
 `BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
 remainder theorem at the exact critical parameters.  The `u = 0` quotient is
 the product of the quadratic `psi` quotient and the `X^5` primary quotient.
