@@ -35,6 +35,7 @@ import BealRegular.Signature357LargeFactorBaseChange
 import BealRegular.Signature357FixedLocalDecomposition
 import BealRegular.Signature357SevenBranchCompletion
 import BealRegular.Signature357GlobalFiberCompletions
+import BealRegular.Signature357CriticalFiniteEtale
 import BealRegular.Signature357S0FiniteEtale
 import BealRegular.Signature357CriticalFiberDecomposition
 import BealRegular.Nineteen

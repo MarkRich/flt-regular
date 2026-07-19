@@ -1,0 +1,14 @@
+import BealRegular.Signature357CriticalFiniteEtale
+
+/-! Kernel axiom audit for critical-branch finite-etale models. -/
+
+namespace BealRegular.Signature357CriticalFiniteEtale
+
+#print axioms binomialIntegralModelGenericFiberEquiv
+#print axioms binomialIntegralModel_finiteEtale
+#print axioms binomialIntegralModel_isUnramifiedIn_padicIdeal
+#print axioms binomialModel_hasFiniteEtaleIntegralModel
+#print axioms sevenBranchIntegralParameter
+#print axioms globalFiberCompletion_of_prime_dvd_C_hasFiniteEtaleModel
+
+end BealRegular.Signature357CriticalFiniteEtale
