@@ -326,6 +326,16 @@ states this directly for the scalar extension to `ℝ` of every noncritical
 rational fiber.  This archimedean result does not determine the degrees or
 discriminants of the global number-field summands.
 
+`BealRegular/Signature357GlobalFactorShape.lean` supplies the conditional
+degree bridge for the paper's seven-adic step.  For any field embedding, if a
+monic degree-seven polynomial becomes irreducible or has exactly two monic
+irreducible factors of degrees `(1,6)`, `(2,5)`, or `(3,4)`, then the original
+polynomial has one of those same four shapes.  The specialization applies this
+to the rational signature `(3,5,7)` fiber after extension to `ℚ_[7]`.  It
+requires an actual seven-adic polynomial factorization, not merely an
+equivalence of quotient algebras; proving that local classification and then
+packaging the global factors as number-field summands remain separate steps.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to
