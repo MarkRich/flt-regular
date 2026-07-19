@@ -202,6 +202,18 @@ unspecified lifted factors; it does
 not identify them with the exact Dahmen--Siksek model algebras, prove
 structural stability or root matching, or classify ramification.
 
+`BealRegular/Signature357ResidualMonicModels.lean` instantiates that lifting
+theorem over the p-adic integers away from `3`, `5`, and `7`.  When
+`u ≡ 0 (mod p)`, the normalized residual factors have degrees `(2, 5)` and are
+the normalized quadratic model and `X^5`; when `u ≡ 1 (mod p)`, after
+translation, they have degrees `(4, 3)` and are the normalized quartic model
+and `X^3`.  The file proves exact coprime integral lifts with those reductions
+and exact product decompositions of the normalized `ℚ_[p]` fiber quotient and
+its translated counterpart.  The lifted factors remain existential: the
+result does not identify their quotient algebras with the fixed
+Dahmen--Siksek model algebras, prove structural stability or a Newton-polygon
+theorem, or classify ramification.
+
 `BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
 remainder theorem at the exact critical parameters.  The `u = 0` quotient is
 the product of the quadratic `psi` quotient and the `X^5` primary quotient.
