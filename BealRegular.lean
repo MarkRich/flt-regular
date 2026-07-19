@@ -42,6 +42,7 @@ import BealRegular.Signature357CriticalProductFiniteEtale
 import BealRegular.Signature357S0FiniteEtale
 import BealRegular.Signature357NonexceptionalFiniteEtale
 import BealRegular.Signature357DiscriminantSupport
+import BealRegular.Signature357GlobalFactorShape
 import BealRegular.Signature357CriticalFiberDecomposition
 import BealRegular.Nineteen
 import BealRegular.Seventeen
