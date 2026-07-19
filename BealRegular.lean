@@ -9,6 +9,7 @@ import BealRegular.AdicEtaleRigidity
 import BealRegular.AdjoinRootEtale
 import BealRegular.AdjoinRootReduction
 import BealRegular.AdjoinRootBaseChange
+import BealRegular.AdjoinRootFactorization
 import BealRegular.GaussianCubeParametrization
 import BealRegular.QuarticThreeDescent
 import BealRegular.GaussianQuarticThreeBridge

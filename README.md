@@ -346,6 +346,15 @@ advertised degree once the local fiber is identified with it.  This module
 does not prove those fiber-model identifications, the finite case
 classification, or the exceptional discriminant exponents.
 
+`BealRegular/AdjoinRootFactorization.lean` bridges abstract quotient-algebra
+classifications back to polynomial factorization.  A field-valued equivalence
+of an adjoin-root algebra proves its monic defining polynomial irreducible.  An
+equivalence with a product of two finite-dimensional fields
+produces two monic irreducible factors of exactly those degrees.  This removes
+the need to turn a local product-algebra isomorphism into a literal polynomial
+identity in the `(1,6)`, `(2,5)`, and `(3,4)` cases.  The module does not prove
+the exceptional seven-adic classification itself.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to
