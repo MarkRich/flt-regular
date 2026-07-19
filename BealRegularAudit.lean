@@ -196,6 +196,12 @@ import BealRegular
 #print axioms BealRegular.Signature357GenericLocalPolynomial.fiberK_separable_baseChange
 #print axioms BealRegular.Signature357GenericLocalPolynomial.padicFiber_discr
 #print axioms BealRegular.Signature357GenericLocalPolynomial.padicFiber_separable
+#print axioms BealRegular.Signature357RealFiber.phiReal
+#print axioms BealRegular.Signature357RealFiber.phiReal_deriv
+#print axioms BealRegular.Signature357RealFiber.phiReal_strictMono
+#print axioms BealRegular.Signature357RealFiber.phiReal_eval_injective
+#print axioms BealRegular.Signature357RealFiber.phiReal_eval_surjective
+#print axioms BealRegular.Signature357RealFiber.fiberReal_existsUniqueRoot
 #print axioms BealRegular.Signature357LocalAlgebra.fiberAlgebra_finite
 #print axioms BealRegular.Signature357LocalAlgebra.fiberAlgebra_finrank_eq_natDegree
 #print axioms BealRegular.Signature357LocalAlgebra.fiberAlgebra_finrank

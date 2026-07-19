@@ -296,6 +296,14 @@ dividing none of `A`, `B`, and `C`, the global completion is the generic fiber
 of this explicit unramified integral model.  This local good-reduction result
 does not classify the global etale algebra or its number-field summands.
 
+`BealRegular/Signature357RealFiber.lean` supplies the archimedean companion.
+The real derivative of `phi` is `105 x^4 (x-1)^2`; a three-interval argument
+at the isolated critical points proves that `phi` is strictly increasing.
+Its odd degree and positive leading coefficient make it surjective, so every
+real fiber `phi(X)-u` has exactly one real root.  This is the real-root core of
+the expected `ℝ × ℂ^3` algebra signature, but the explicit algebra equivalence
+and its factor bookkeeping remain separate steps.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to
