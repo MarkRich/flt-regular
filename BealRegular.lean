@@ -18,6 +18,7 @@ import BealRegular.Signature357BranchNormalForms
 import BealRegular.Signature357ModelFactorInvariants
 import BealRegular.Signature357ModelFactorAlgebras
 import BealRegular.Signature357PadicModelUnits
+import BealRegular.Signature357AdicFactorLifting
 import BealRegular.Signature357CriticalFiberDecomposition
 import BealRegular.Nineteen
 import BealRegular.Seventeen

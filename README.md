@@ -191,6 +191,17 @@ discriminants, lift nearby factors, identify quotient algebras, prove
 structural stability or a Newton-polygon theorem, or classify
 valuation-theoretic ramification.
 
+`BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
+monic factor-lifting theorem over an adically complete ring from formal
+smoothness of the universal coprime factorization ring.  After base change to
+any field algebra, CRT gives an exact product decomposition of the quotient by the
+lifted product.  It also proves that a unit constant coefficient makes a
+polynomial coprime to every power of `X`, and verifies the required
+completeness hypothesis for `ℤ_[p]` at `(p)`.  The result produces
+unspecified lifted factors; it does
+not identify them with the exact Dahmen--Siksek model algebras, prove
+structural stability or root matching, or classify ramification.
+
 `BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
 remainder theorem at the exact critical parameters.  The `u = 0` quotient is
 the product of the quadratic `psi` quotient and the `X^5` primary quotient.
