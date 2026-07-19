@@ -25,6 +25,7 @@ import BealRegular.Signature357PadicModelUnits
 import BealRegular.Signature357AdicFactorLifting
 import BealRegular.Signature357ResidualMonicModels
 import BealRegular.Signature357LargeFactorRigidity
+import BealRegular.Signature357LargeFactorBaseChange
 import BealRegular.Signature357CriticalFiberDecomposition
 import BealRegular.Nineteen
 import BealRegular.Seventeen
