@@ -1,6 +1,7 @@
 import BealRegular.SignatureReduction
 import BealRegular.AdicCompletenessPowers
 import BealRegular.WeightedPolynomialScaling
+import BealRegular.Signature357SmallFactorScaling
 import BealRegular.AdicEtaleRigidity
 import BealRegular.AdjoinRootEtale
 import BealRegular.AdjoinRootReduction
