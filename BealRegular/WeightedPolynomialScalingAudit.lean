@@ -1,0 +1,15 @@
+import BealRegular.WeightedPolynomialScaling
+
+/-! Kernel axiom audit for weighted polynomial root scaling. -/
+
+namespace BealRegular.WeightedPolynomialScaling
+
+#print axioms weightedCoeff_mem_of_mul_eq_of_constantCoeff_isUnit
+#print axioms lowCoeffs_mem_of_mul_eq_of_constantCoeff_isUnit
+#print axioms pow_dvd_descaled_coeff_of_scaleRoots_eq
+#print axioms exists_monicDegreeEq_scaleRoots_eq_of_weightedDvd
+#print axioms exists_monicDegreeEq_scaleRoots_eq_of_mem_span_pow
+#print axioms adjoinRootScaleRootsAlgEquiv
+#print axioms adjoinRootScaleRootsAlgEquiv_root
+
+end BealRegular.WeightedPolynomialScaling

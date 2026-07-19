@@ -198,6 +198,17 @@ reindexes Hausdorffness and Cauchy convergence along the cofinal subsequence
 higher-precision ideal such as `(p)^(k*r)`; the generic theorem itself does
 not construct or identify the resulting polynomial factors.
 
+`BealRegular/WeightedPolynomialScaling.lean` proves that multiplication by a
+factor with unit constant coefficient preserves complementary ideal-power
+bounds on low coefficients, as well as uniform membership in one fixed ideal.
+For a principal ideal, the weighted bounds construct an integral monic descale
+through `Polynomial.scaleRoots`; domain cancellation records the powers left
+in its coefficients.  Over any coefficient ring in which the scaling element
+is already a unit, a separate explicit adjoin-root algebra equivalence
+implements the root change of variables.  The result does not claim uniqueness
+over zero divisors, identify the descaled residual polynomial, or prove
+ramification properties.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to
