@@ -214,6 +214,16 @@ result does not identify their quotient algebras with the fixed
 Dahmen--Siksek model algebras, prove structural stability or a Newton-polygon
 theorem, or classify ramification.
 
+`BealRegular/Signature357LargeFactorRigidity.lean` identifies the integral
+algebras of the large lifted factors.  A local-ring resultant theorem lifts
+separability from the residue field even when the derivative degree drops;
+complete formally-etale rigidity then proves that the adjoin-root algebra of
+every prescribed degree-two or degree-four lift away from `3`, `5`, and `7`
+is isomorphic over `ℤ_[p]` to the normalized quadratic or quartic model
+algebra.  The result does not yet transport these
+equivalences into the existing `ℚ_[p]` product decompositions, and it does not
+identify or rescale the non-etale degree-five or degree-three factors.
+
 `BealRegular/AdicEtaleRigidity.lean` proves a model-independent rigidity
 principle for complete formally etale algebras.  Finite modules over a
 Noetherian adically complete ring inherit completeness; reduction modulo the
