@@ -4,6 +4,7 @@ import BealRegular.WeightedPolynomialScaling
 import BealRegular.Signature357SmallFactorScaling
 import BealRegular.Signature357SmallBinomialRigidity
 import BealRegular.Signature357ZeroBranchDescaledModel
+import BealRegular.Signature357OneBranchDescaledModel
 import BealRegular.AdicEtaleRigidity
 import BealRegular.AdjoinRootEtale
 import BealRegular.AdjoinRootReduction
