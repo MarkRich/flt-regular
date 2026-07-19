@@ -224,6 +224,15 @@ signature `(3,5,7)` factors, but it does not prove that the relevant polynomial
 quotients are formally etale, construct their residual equivalences, rescale
 the non-etale small factors, or identify a Dahmen--Siksek model algebra.
 
+`BealRegular/AdjoinRootEtale.lean` supplies the polynomial criterion needed by
+that rigidity layer.  A monic polynomial coprime to its derivative defines a
+finite etale adjoin-root algebra over any commutative ring; unit-resultant and
+unit-discriminant corollaries provide directly usable arithmetic inputs.  The
+discriminant theorem also handles monic degree-zero polynomials.  The module
+does not prove the signature-specific discriminants are units, commute the
+quotient algebra with residual base change, or apply rigidity to a lifted
+factor.
+
 `BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
 remainder theorem at the exact critical parameters.  The `u = 0` quotient is
 the product of the quadratic `psi` quotient and the `X^5` primary quotient.
