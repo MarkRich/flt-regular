@@ -214,6 +214,16 @@ result does not identify their quotient algebras with the fixed
 Dahmen--Siksek model algebras, prove structural stability or a Newton-polygon
 theorem, or classify ramification.
 
+`BealRegular/AdicEtaleRigidity.lean` proves a model-independent rigidity
+principle for complete formally etale algebras.  Finite modules over a
+Noetherian adically complete ring inherit completeness; reduction modulo the
+adic ideal is bijective on maps out of a formally etale algebra; and an
+equivalence of residual quotient algebras lifts to an equivalence of the
+complete algebras.  This provides a route to avoid root matching for the large
+signature `(3,5,7)` factors, but it does not prove that the relevant polynomial
+quotients are formally etale, construct their residual equivalences, rescale
+the non-etale small factors, or identify a Dahmen--Siksek model algebra.
+
 `BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
 remainder theorem at the exact critical parameters.  The `u = 0` quotient is
 the product of the quadratic `psi` quotient and the `X^5` primary quotient.
