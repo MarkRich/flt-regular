@@ -231,6 +231,14 @@ adjoin-root algebra over `ℚ_[p]` is therefore equivalent to the fixed
 binomial model algebra.  This abstract algebra equivalence does not classify
 ramification, exclude signature `(3,5,7)`, or prove Beal's conjecture.
 
+`BealRegular/Signature357OneBranchDescaledModel.lean` proves the parallel
+residual equality for the translated-one branch.  Substitution by `X ↦ qX`
+and cancellation of the common `q^3` identify the integral cubic descale
+modulo `p` with `X^3 - 35⁻¹a`.  If `a` is a p-adic unit, the original scaled
+cubic adjoin-root algebra over `ℚ_[p]` is therefore equivalent to the fixed
+binomial model algebra.  Again, this is an abstract algebra equivalence and
+does not classify ramification or exclude the signature.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to
