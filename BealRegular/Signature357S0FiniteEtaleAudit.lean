@@ -1,0 +1,23 @@
+import BealRegular.Signature357S0FiniteEtale
+
+/-! Kernel axiom audit for the signature `(3,5,7)` ordinary branch. -/
+
+namespace BealRegular.Signature357S0FiniteEtale
+
+#print axioms normalizedIntegralFiber_derivative
+#print axioms normalizedIntegralFiber_eval_zero
+#print axioms normalizedIntegralFiber_eval_one
+#print axioms normalizedIntegralFiber_isCoprime_derivative
+#print axioms normalizedIntegralFiber_discr_isUnit
+#print axioms normalizedIntegralFiber_finiteEtale
+#print axioms normalizedIntegralFiber_isUnramifiedIn_padicIdeal
+#print axioms s0IntegralParameter
+#print axioms s0IntegralParameter_isUnit
+#print axioms one_sub_s0IntegralParameter_eq
+#print axioms one_sub_s0IntegralParameter_isUnit
+#print axioms algebraMap_one_sub_s0IntegralParameter
+#print axioms algebraMap_s0IntegralParameter
+#print axioms normalizedIntegralFiberGenericFiberEquiv
+#print axioms globalFiberCompletion_s0_hasFiniteEtaleModel
+
+end BealRegular.Signature357S0FiniteEtale
