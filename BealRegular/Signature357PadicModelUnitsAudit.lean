@@ -1,0 +1,33 @@
+import BealRegular.Signature357PadicModelUnits
+
+/-! Kernel axiom audit for the signature `(3,5,7)` integral p-adic model units. -/
+
+namespace BealRegular.Signature357PadicModelUnits
+
+#print axioms quadraticIntegralModel_natDegree
+#print axioms quadraticIntegralModel_leadingCoeff
+#print axioms quadraticIntegralModel_coeff_zero
+#print axioms quarticIntegralModel_natDegree
+#print axioms quarticIntegralModel_leadingCoeff
+#print axioms quarticIntegralModel_coeff_zero
+#print axioms quadraticIntegralModel_discr
+#print axioms quarticIntegralModel_discr
+#print axioms quadraticIntegralModel_endpoints_isUnit
+#print axioms quarticIntegralModel_endpoints_isUnit
+#print axioms quadraticIntegralModel_endpoint_norms
+#print axioms quarticIntegralModel_endpoint_norms
+#print axioms quadraticIntegralModel_discr_isUnit
+#print axioms quarticIntegralModel_discr_isUnit
+#print axioms quadraticIntegralModel_discr_norm_eq_one
+#print axioms quarticIntegralModel_discr_norm_eq_one
+#print axioms binomialIntegralModel_natDegree
+#print axioms binomialIntegralModel_monic
+#print axioms binomialIntegralModel_leadingCoeff
+#print axioms binomialIntegralModel_coeff_zero
+#print axioms binomialIntegralModel_endpoints_isUnit
+#print axioms binomialIntegralModel_endpoint_norms
+#print axioms binomialIntegralModel_discr
+#print axioms binomialIntegralModel_discr_isUnit
+#print axioms binomialIntegralModel_discr_norm_eq_one
+
+end BealRegular.Signature357PadicModelUnits

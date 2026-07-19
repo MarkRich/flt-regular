@@ -180,6 +180,17 @@ that the quotients are fields, identify an original fiber quotient with their
 product, prove structural stability or integral-model etaleness, or classify
 valuation-theoretic ramification.
 
+`BealRegular/Signature357PadicModelUnits.lean` realizes the same factors over
+the p-adic integers.  For `p != 3, 5, 7`, the endpoint coefficients and exact
+discriminants of `psi` and `Psi` have p-adic norm one; more generally, if `a`
+is a unit and `p` does not divide the positive degree `n`, then the endpoints
+and discriminant of `X^n - a` are units.  These statements verify the
+endpoint-unit and discriminant-unit arithmetic inputs used by the local
+models.  They do not deduce the rootwise derivative norm bound from the unit
+discriminants, lift nearby factors, identify quotient algebras, prove
+structural stability or a Newton-polygon theorem, or classify
+valuation-theoretic ramification.
+
 `BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
 remainder theorem at the exact critical parameters.  The `u = 0` quotient is
 the product of the quadratic `psi` quotient and the `X^5` primary quotient.
