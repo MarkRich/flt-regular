@@ -276,9 +276,16 @@ of those critical completions.  It proves generically that `X^n-b`, for a
 p-adic unit `b` with `p ∤ n`, defines a finite-etale `ℤ_[p]`-algebra that is
 unramified above `(p)` and whose generic fiber is the expected p-adic binomial
 algebra.  Applied to `p ∣ C`, this makes the septic completion the generic
-fiber of the explicit integral model `X^7 - 1/(15 B^2)`.  The analogous
-quadratic-by-quintic and quartic-by-cubic product integral models remain a
-separate step.
+fiber of the explicit integral model `X^7 - 1/(15 B^2)`.
+
+`BealRegular/Signature357CriticalProductFiniteEtale.lean` completes the local
+integral upgrade away from `3`, `5`, and `7`.  At `p ∣ B`, the completion is
+the generic fiber of an explicit finite-etale quadratic-by-quintic model whose
+quintic parameter is `1/(21 C^2)`.  At `p ∣ A`, it is the generic fiber of a
+finite-etale quartic-by-cubic model with cubic parameter `-1/(35 C^4)`, so the
+cubic polynomial is `X^3 + 1/(35 C^4)`.  Both product models are unramified
+above `(p)`.  These local products do not assert a corresponding global
+rational factorization or identify a global ring of integers.
 
 `BealRegular/Signature357S0FiniteEtale.lean` treats the ordinary `S₀` case.
 The normalized integral fiber has derivative `7 X^4 (X-1)^2`, so when both

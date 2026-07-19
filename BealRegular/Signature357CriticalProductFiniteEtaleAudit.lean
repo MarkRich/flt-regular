@@ -1,0 +1,24 @@
+import BealRegular.Signature357CriticalProductFiniteEtale
+
+/-! Kernel axiom audit for critical-branch finite-etale product models. -/
+
+namespace BealRegular.Signature357CriticalProductFiniteEtale
+
+#print axioms normalizedQuadraticModel_finiteEtale
+#print axioms normalizedQuarticModel_finiteEtale
+#print axioms normalizedQuadraticModelGenericFiberEquiv
+#print axioms normalizedQuarticModelGenericFiberEquiv
+#print axioms zeroBranchIntegralModel_finiteEtale
+#print axioms oneBranchIntegralModel_finiteEtale
+#print axioms zeroBranchIntegralModel_isUnramifiedIn_padicIdeal
+#print axioms oneBranchIntegralModel_isUnramifiedIn_padicIdeal
+#print axioms zeroBranchIntegralModelGenericFiberEquiv
+#print axioms oneBranchIntegralModelGenericFiberEquiv
+#print axioms zeroBranchIntegralParameter
+#print axioms oneBranchIntegralParameter
+#print axioms zeroBranchIntegralParameter_isUnit
+#print axioms oneBranchIntegralParameter_isUnit
+#print axioms globalFiberCompletion_of_prime_dvd_B_hasFiniteEtaleProductModel
+#print axioms globalFiberCompletion_of_prime_dvd_A_hasFiniteEtaleProductModel
+
+end BealRegular.Signature357CriticalProductFiniteEtale
