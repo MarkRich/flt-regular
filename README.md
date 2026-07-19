@@ -336,6 +336,16 @@ requires an actual seven-adic polynomial factorization, not merely an
 equivalence of quotient algebras; proving that local classification and then
 packaging the global factors as number-field summands remain separate steps.
 
+`BealRegular/Signature357SevenAdicEisenstein.lean` certifies the explicit
+field models appearing in the exceptional seven-adic classification.  It
+proves `X^7 + 7cX + 7` irreducible over `ℚ_[7]` whenever `‖c‖ ≤ 1`, and
+`X^n - 7b` irreducible for every positive `n` and seven-adic unit `b`.
+These families include all septic and radical models in the paper's
+Proposition 3.5, so each listed non-linear factor quotient is a field of its
+advertised degree once the local fiber is identified with it.  This module
+does not prove those fiber-model identifications, the finite case
+classification, or the exceptional discriminant exponents.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to

@@ -17,6 +17,7 @@ import BealRegular.Signature357Residues
 import BealRegular.Signature357PrimePower
 import BealRegular.Signature357FiveAdic
 import BealRegular.Signature357SevenAdic
+import BealRegular.Signature357SevenAdicEisenstein
 import BealRegular.Signature357CrossPrimeAdic
 import BealRegular.Signature357RemainingPrimeBranches
 import BealRegular.Signature357CompositeLocal
