@@ -1,0 +1,31 @@
+import BealRegular.Signature357ResidualMonicModels
+
+/-! Kernel axiom audit for the signature `(3,5,7)` residual monic models. -/
+
+namespace BealRegular.Signature357ResidualMonicModels
+
+#print axioms algebraMap_ringInverse_fifteen
+#print axioms normalizedIntegralFiber_map_padic
+#print axioms normalizedTranslatedIntegralFiber_map_padic
+#print axioms normalizedQuadraticModel_monic
+#print axioms normalizedQuadraticModel_natDegree
+#print axioms normalizedQuarticModel_monic
+#print axioms normalizedQuarticModel_natDegree
+#print axioms normalizedIntegralFiber_monic
+#print axioms normalizedIntegralFiber_natDegree
+#print axioms normalizedTranslatedIntegralFiber_monic
+#print axioms normalizedTranslatedIntegralFiber_natDegree
+#print axioms normalizedIntegralFiber_zero_factorization
+#print axioms normalizedTranslatedIntegralFiber_one_factorization
+#print axioms zeroBranch_residual_factorization
+#print axioms oneBranch_residual_factorization
+#print axioms zeroBranch_residual_isCoprime
+#print axioms oneBranch_residual_isCoprime
+#print axioms zeroBranch_residual_liftingData
+#print axioms oneBranch_residual_liftingData
+#print axioms zeroBranch_exists_coprime_monic_factorization
+#print axioms oneBranch_exists_coprime_monic_factorization
+#print axioms zeroBranch_exists_factorization_and_padicDecomposition
+#print axioms oneBranch_exists_factorization_and_padicDecomposition
+
+end BealRegular.Signature357ResidualMonicModels
