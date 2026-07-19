@@ -1,0 +1,15 @@
+import BealRegular.Signature357DiscriminantSupport
+
+/-! Kernel axiom audit for conditional signature `(3,5,7)` discriminant support. -/
+
+namespace BealRegular.Signature357DiscriminantSupport
+
+#print axioms IsUnramifiedAwayFrom357
+#print axioms eq_three_pow_mul_five_pow_mul_seven_pow_of_prime_dvd
+#print axioms prime_eq_three_or_five_or_seven_of_dvd_discr
+#print axioms natAbs_discr_eq_three_pow_mul_five_pow_mul_seven_pow
+#print axioms discr_eq_complexSign_mul_three_pow_mul_five_pow_mul_seven_pow
+#print axioms discr_eq_neg_three_pow_mul_five_pow_mul_seven_pow_of_odd
+#print axioms discr_eq_neg_three_pow_mul_five_pow_mul_seven_pow_of_three_complexPlaces
+
+end BealRegular.Signature357DiscriminantSupport
