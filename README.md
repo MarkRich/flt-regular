@@ -239,6 +239,16 @@ cubic adjoin-root algebra over `ℚ_[p]` is therefore equivalent to the fixed
 binomial model algebra.  Again, this is an abstract algebra equivalence and
 does not classify ramification or exclude the signature.
 
+`BealRegular/Signature357FixedLocalDecomposition.lean` composes the large- and
+small-factor equivalences all the way back to the original unnormalized fibers
+on the two critical branches.
+For `p != 3, 5, 7`, a nonzero `q` in the p-adic maximal ideal, and a unit `a`,
+the zero branch at `q^5 a` is the product of the fixed quadratic model and the
+binomial model `X^5 - 21⁻¹a`; the branch at `1 + q^3 a` is the product of the
+fixed quartic model and `X^3 - 35⁻¹a`.  These are abstract p-adic algebra
+equivalences.  They do not identify field factors, classify ramification,
+exclude signature `(3,5,7)`, or prove Beal's conjecture.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to
