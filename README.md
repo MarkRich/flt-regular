@@ -249,6 +249,17 @@ fixed quartic model and `X^3 - 35⁻¹a`.  These are abstract p-adic algebra
 equivalences.  They do not identify field factors, classify ramification,
 exclude signature `(3,5,7)`, or prove Beal's conjecture.
 
+`BealRegular/Signature357GlobalFiberCompletions.lean` packages the rational
+fiber algebra `K_(B,C) = ℚ[T]/(phi(T) - B^5/C^7)` and proves that scalar
+extension to `ℚ_[p]` is the corresponding p-adic fiber.  For `p != 3, 5, 7`,
+coprimality turns `p ∣ B` into the quadratic-by-quintic completion with
+parameter `1/(21 C^2)`.  From an equation `A^3 + B^5 = C^7`, the condition
+`p ∣ A` similarly gives the quartic-by-cubic completion with parameter
+`-1/(35 C^4)`.  Local product decomposition does not imply that the rational
+algebra has global factors of the same degrees; these results do not prove
+unramifiedness, perform a number-field classification, exclude the signature,
+or prove Beal's conjecture.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to

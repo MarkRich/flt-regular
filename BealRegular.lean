@@ -33,6 +33,7 @@ import BealRegular.Signature357ResidualMonicModels
 import BealRegular.Signature357LargeFactorRigidity
 import BealRegular.Signature357LargeFactorBaseChange
 import BealRegular.Signature357FixedLocalDecomposition
+import BealRegular.Signature357GlobalFiberCompletions
 import BealRegular.Signature357CriticalFiberDecomposition
 import BealRegular.Nineteen
 import BealRegular.Seventeen
