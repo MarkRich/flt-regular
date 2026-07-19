@@ -1,6 +1,7 @@
 import BealRegular.SignatureReduction
 import BealRegular.AdicEtaleRigidity
 import BealRegular.AdjoinRootEtale
+import BealRegular.AdjoinRootReduction
 import BealRegular.GaussianCubeParametrization
 import BealRegular.QuarticThreeDescent
 import BealRegular.GaussianQuarticThreeBridge

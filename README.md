@@ -233,6 +233,15 @@ does not prove the signature-specific discriminants are units, commute the
 quotient algebra with residual base change, or apply rigidity to a lifted
 factor.
 
+`BealRegular/AdjoinRootReduction.lean` packages that residual base change.
+Quotienting an adjoin-root algebra by an extended ideal is equivalent to
+adjoining a root of the coefficientwise residual polynomial, both over the
+original coefficient ring and naturally over the residue ring.  Equality,
+association by a unit, and replacement of the residue ring by an isomorphic
+ring are supported.  The module does not verify a signature-specific residual
+identity, establish formal etaleness, or apply adic rigidity to identify a
+lifted factor with a fixed model algebra.
+
 `BealRegular/Signature357CriticalFiberDecomposition.lean` applies the Chinese
 remainder theorem at the exact critical parameters.  The `u = 0` quotient is
 the product of the quadratic `psi` quotient and the `X^5` primary quotient.
