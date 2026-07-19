@@ -304,6 +304,16 @@ unramifiedness certificates.  It does not identify this chosen model with the
 completed ring of integers, so a global number-field discriminant conclusion
 still requires a maximal-order comparison.
 
+`BealRegular/Signature357DiscriminantSupport.lean` records a weaker
+field-valued consequence, conditionally.  If a number field's ring of integers is
+unramified away from `3`, `5`, and `7`, then its absolute discriminant is
+`3^a * 5^b * 7^c`; its sign is `(-1)` to the number of complex places, and in
+particular three complex places give `-3^a * 5^b * 7^c`.  The exponents here
+are arbitrary nonnegative integers, not the sharper paper-specific lists, and
+the theorem applies to a number field rather than directly to a product
+algebra.  Connecting the local models above to this hypothesis remains a
+separate completed-maximal-order theorem.
+
 `BealRegular/Signature357RealFiber.lean` supplies the archimedean companion.
 The real derivative of `phi` is `105 x^4 (x-1)^2`; a three-interval argument
 at the isolated critical points proves that `phi` is strictly increasing.
