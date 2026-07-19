@@ -209,6 +209,13 @@ implements the root change of variables.  The result does not claim uniqueness
 over zero divisors, identify the descaled residual polynomial, or prove
 ramification properties.
 
+`BealRegular/Signature357SmallFactorScaling.lean` specializes those weighted
+bounds to the zero and translated-one critical fibers.  A lifted quadratic or
+quartic model factor has unit constant coefficient, so its complementary
+quintic or cubic factor admits an integral monic descale through
+`Polynomial.scaleRoots`.  This stage does not yet identify either descaled
+residual polynomial or its quotient algebra.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to
