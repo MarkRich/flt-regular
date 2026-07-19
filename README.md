@@ -268,8 +268,17 @@ identifies the whole completion with the septic model
 `X^7 - 1/(15 B^2)`; parameters from other unit normalizations can differ by
 a seventh power.  Local product decomposition does not imply that the rational
 algebra has global factors of the same degrees; these results do not prove
-unramifiedness, perform a number-field classification, exclude the signature,
-or prove Beal's conjecture.
+unramifiedness on those critical branches, perform a number-field
+classification, exclude the signature, or prove Beal's conjecture.
+
+`BealRegular/Signature357S0FiniteEtale.lean` treats the ordinary `S₀` case.
+The normalized integral fiber has derivative `7 X^4 (X-1)^2`, so when both
+the parameter `u` and its complement `1-u` are p-adic units, the polynomial
+has unit discriminant and its adjoin-root algebra is finite etale over
+`ℤ_[p]`.  For a solution `A^3 + B^5 = C^7` and a prime `p != 3, 5, 7`
+dividing none of `A`, `B`, and `C`, the global completion is the generic fiber
+of this explicit unramified integral model.  This local good-reduction result
+does not classify the global etale algebra or its number-field summands.
 
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
