@@ -1,0 +1,16 @@
+import BealRegular.Signature357SmallBinomialRigidity
+
+/-! Kernel axiom audit for p-adic rigidity of descaled binomial factors. -/
+
+namespace BealRegular.Signature357SmallBinomialRigidity
+
+#print axioms binomialIntegralModelMonic
+#print axioms binomialIntegralModel_isCoprime_derivative
+#print axioms descaledSmallFactorIntegralAlgEquiv
+#print axioms descaledSmallFactorIntegralAlgEquivOfMonicMapEq
+#print axioms descaledSmallFactorPadicAlgEquiv
+#print axioms map_scaleRoots_eq_padic
+#print axioms isUnit_algebraMap_padic_of_ne_zero
+#print axioms originalSmallFactorPadicAlgEquivOfScaleRootsEq
+
+end BealRegular.Signature357SmallBinomialRigidity

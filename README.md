@@ -216,6 +216,13 @@ quintic or cubic factor admits an integral monic descale through
 `Polynomial.scaleRoots`.  This stage does not yet identify either descaled
 residual polynomial or its quotient algebra.
 
+`BealRegular/Signature357SmallBinomialRigidity.lean` proves that a descaled
+monic factor with separable binomial reduction has the same integral
+adjoin-root algebra as that binomial model.  After base change, an exact
+nonzero root scaling identifies the original factor algebra over `ℚ_[p]`
+with the fixed binomial model algebra.  The generic result assumes, rather
+than proves, the required residual equality.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to
