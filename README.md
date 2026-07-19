@@ -249,13 +249,24 @@ fixed quartic model and `X^3 - 35⁻¹a`.  These are abstract p-adic algebra
 equivalences.  They do not identify field factors, classify ramification,
 exclude signature `(3,5,7)`, or prove Beal's conjecture.
 
+`BealRegular/Signature357SevenBranchCompletion.lean` treats the denominator
+or infinity branch.  For `q` nonzero in the p-adic maximal ideal and unit
+`a`, inverse scaling turns the whole degree-seven fiber at `q⁻⁷a` into a
+monic integral polynomial whose reduction is `X^7 - 15⁻¹a`.  Formal-etale
+rigidity and root scaling therefore identify the original p-adic algebra with
+that septic binomial model.  This is not an irreducibility claim: the quotient
+need not be a field.
+
 `BealRegular/Signature357GlobalFiberCompletions.lean` packages the rational
 fiber algebra `K_(B,C) = ℚ[T]/(phi(T) - B^5/C^7)` and proves that scalar
 extension to `ℚ_[p]` is the corresponding p-adic fiber.  For `p != 3, 5, 7`,
 coprimality turns `p ∣ B` into the quadratic-by-quintic completion with
 parameter `1/(21 C^2)`.  From an equation `A^3 + B^5 = C^7`, the condition
 `p ∣ A` similarly gives the quartic-by-cubic completion with parameter
-`-1/(35 C^4)`.  Local product decomposition does not imply that the rational
+`-1/(35 C^4)`.  If `p ∣ C`, the explicit normalization `q=C/B`
+identifies the whole completion with the septic model
+`X^7 - 1/(15 B^2)`; parameters from other unit normalizations can differ by
+a seventh power.  Local product decomposition does not imply that the rational
 algebra has global factors of the same degrees; these results do not prove
 unramifiedness, perform a number-field classification, exclude the signature,
 or prove Beal's conjecture.
