@@ -296,6 +296,14 @@ dividing none of `A`, `B`, and `C`, the global completion is the generic fiber
 of this explicit unramified integral model.  This local good-reduction result
 does not classify the global etale algebra or its number-field summands.
 
+`BealRegular/Signature357NonexceptionalFiniteEtale.lean` packages these four
+branches into one result: for every prime `p != 3, 5, 7`, the completed
+rational fiber has a finite-etale `ℤ_[p]`-model whose generic fiber is the
+completion.  The package exposes its finiteness, etaleness, and local
+unramifiedness certificates.  It does not identify this chosen model with the
+completed ring of integers, so a global number-field discriminant conclusion
+still requires a maximal-order comparison.
+
 `BealRegular/Signature357RealFiber.lean` supplies the archimedean companion.
 The real derivative of `phi` is `105 x^4 (x-1)^2`; a three-interval argument
 at the isolated critical points proves that `phi` is strictly increasing.

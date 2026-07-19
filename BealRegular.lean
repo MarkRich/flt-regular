@@ -40,6 +40,7 @@ import BealRegular.Signature357GlobalFiberCompletions
 import BealRegular.Signature357CriticalFiniteEtale
 import BealRegular.Signature357CriticalProductFiniteEtale
 import BealRegular.Signature357S0FiniteEtale
+import BealRegular.Signature357NonexceptionalFiniteEtale
 import BealRegular.Signature357CriticalFiberDecomposition
 import BealRegular.Nineteen
 import BealRegular.Seventeen
