@@ -191,6 +191,13 @@ discriminants, lift nearby factors, identify quotient algebras, prove
 structural stability or a Newton-polygon theorem, or classify
 valuation-theoretic ramification.
 
+`BealRegular/AdicCompletenessPowers.lean` proves that a module complete for an
+ideal `I` remains complete for every positive power `I^N`.  The proof
+reindexes Hausdorffness and Cauchy convergence along the cofinal subsequence
+`N * n`.  In the signature `(3,5,7)` program this allows factor lifting at a
+higher-precision ideal such as `(p)^(k*r)`; the generic theorem itself does
+not construct or identify the resulting polynomial factors.
+
 `BealRegular/Signature357AdicFactorLifting.lean` derives a generic coprime
 monic factor-lifting theorem over an adically complete ring from formal
 smoothness of the universal coprime factorization ring.  After base change to

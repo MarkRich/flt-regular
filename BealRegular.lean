@@ -1,4 +1,5 @@
 import BealRegular.SignatureReduction
+import BealRegular.AdicCompletenessPowers
 import BealRegular.AdicEtaleRigidity
 import BealRegular.AdjoinRootEtale
 import BealRegular.AdjoinRootReduction
