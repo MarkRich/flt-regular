@@ -220,9 +220,17 @@ separability from the residue field even when the derivative degree drops;
 complete formally-etale rigidity then proves that the adjoin-root algebra of
 every prescribed degree-two or degree-four lift away from `3`, `5`, and `7`
 is isomorphic over `ℤ_[p]` to the normalized quadratic or quartic model
-algebra.  The result does not yet transport these
-equivalences into the existing `ℚ_[p]` product decompositions, and it does not
-identify or rescale the non-etale degree-five or degree-three factors.
+algebra.  This integral result alone does not identify or rescale the
+non-etale degree-five or degree-three factors.
+
+`BealRegular/Signature357LargeFactorBaseChange.lean` extends those integral
+equivalences to `ℚ_[p]`, removes the unit normalization, and composes them with
+the existing product decompositions.  Thus the zero branch has the fixed
+quadratic `psi` algebra as its degree-two factor, while the translated one
+branch has the fixed quartic `Psi` algebra as its degree-four factor.  These
+are abstract algebra equivalences: the lifted factors remain existential,
+the distinguished roots are not matched, and the non-etale degree-five and
+degree-three factor algebras remain unidentified.
 
 `BealRegular/AdicEtaleRigidity.lean` proves a model-independent rigidity
 principle for complete formally etale algebras.  Finite modules over a
