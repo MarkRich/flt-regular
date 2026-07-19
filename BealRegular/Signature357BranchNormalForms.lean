@@ -21,7 +21,7 @@ open Signature357GenericLocalPolynomial
 
 noncomputable section
 
-variable {K : Type*} [Field K]
+variable {K : Type*} [CommRing K]
 
 /-- The quadratic factor `psi` in equation (8) of Dahmen--Siksek. -/
 def psiK : K[X] :=
@@ -30,6 +30,8 @@ def psiK : K[X] :=
 /-- The quartic factor `Psi` in equation (8) of Dahmen--Siksek. -/
 def PsiK : K[X] :=
   15 * X ^ 4 + 70 * X ^ 3 + 126 * X ^ 2 + 105 * X + 35
+
+variable {K : Type*} [Field K]
 
 /-- The `p ∣ x` normal form before the paper applies Corollary 2.2. -/
 theorem fiveBranch_normalForm (q a : K) :

@@ -21,18 +21,21 @@ open Signature357BranchNormalForms
 
 noncomputable section
 
-variable {K : Type*} [Field K] [CharZero K]
+variable {K : Type*} [CommRing K] [NoZeroDivisors K] [CharZero K]
 
+omit [NoZeroDivisors K] in
 /-- The quadratic factor `psiK` has degree two. -/
 theorem psiK_natDegree : (psiK (K := K)).natDegree = 2 := by
   simp only [psiK]
   compute_degree!
 
+omit [NoZeroDivisors K] in
 /-- The quartic factor `PsiK` has degree four. -/
 theorem PsiK_natDegree : (PsiK (K := K)).natDegree = 4 := by
   simp only [PsiK]
   compute_degree!
 
+omit [NoZeroDivisors K] in
 /-- The exact discriminant of the quadratic factor is `-35`. -/
 theorem psiK_discr : (psiK (K := K)).discr = -(35 : K) := by
   have hdegree : (psiK (K := K)).degree = (2 : WithBot ℕ) := by
@@ -45,7 +48,7 @@ theorem psiK_discr : (psiK (K := K)).discr = -(35 : K) := by
   simp [psiK, coeff_X, coeff_X_pow]
   norm_num
 
-omit [CharZero K] in
+omit [NoZeroDivisors K] [CharZero K] in
 /-- The exact derivative of the quartic factor. -/
 theorem PsiK_derivative :
     (PsiK (K := K)).derivative =
@@ -169,6 +172,8 @@ theorem septicModel_discr (a : K) :
     (X ^ 7 - C a : K[X]).discr = -(7 ^ 7 : K) * a ^ 6 := by
   rw [discr_X_pow_sub_C (by norm_num : 0 < 7)]
   norm_num
+
+variable {K : Type*} [Field K] [CharZero K]
 
 private theorem separable_of_discr_ne_zero {f : K[X]}
     (hdegree : 0 < f.natDegree) (hdiscr : f.discr ≠ 0) : f.Separable := by
