@@ -1,6 +1,7 @@
 import BealRegular.AdjoinRootBaseChange
 import BealRegular.Signature357FixedLocalDecomposition
 import BealRegular.Signature357LocalRatio
+import BealRegular.Signature357SevenBranchCompletion
 
 /-!
 # P-adic completions of the rational signature `(3,5,7)` fiber
@@ -10,7 +11,7 @@ For natural numbers `B` and `C`, this module packages the rational algebra
 `K_(B,C) = ℚ[T] / (phi(T) - B^5 / C^7)`
 
 and identifies its scalar extension to every p-adic field with the
-corresponding p-adic fiber algebra.  It then connects two divisibility cases
+corresponding p-adic fiber algebra.  It then connects three divisibility cases
 from a coprime signature `(3,5,7)` equation to the explicit nearby-branch
 decompositions:
 
@@ -18,13 +19,15 @@ decompositions:
   with parameter `1 / (21 * C^2)`;
 * if `p ∣ A` and `A^3 + B^5 = C^7`, the completion is the quartic model times
   the cubic model with parameter `-1 / (35 * C^4)`.
+* if `p ∣ C`, the normalization `q = C / B` identifies the whole completion
+  with the septic model having parameter `1 / (15 * B^2)`.
 
 These are necessary local descriptions of a rational fiber.  A product
 decomposition after completion does not imply that the rational algebra has
-global factors of the same degrees.  The results do not cover the other local
-branches or the exceptional primes `3`, `5`, and `7`, prove unramifiedness,
+global factors of the same degrees.  The results do not cover the unit-unit
+local case or the exceptional primes `3`, `5`, and `7`, prove unramifiedness,
 classify number fields, exclude signature `(3,5,7)`, or prove Beal's
-conjecture.
+conjecture.  The septic quotient is not asserted to be irreducible or a field.
 -/
 
 namespace BealRegular.Signature357GlobalFiberCompletions
@@ -36,6 +39,7 @@ open Signature357FixedLocalDecomposition
 open Signature357LocalRatio
 open Signature357ModelFactorAlgebras
 open Signature357ResidualMonicModels
+open Signature357SevenBranchCompletion
 
 noncomputable section
 
@@ -120,6 +124,28 @@ theorem globalFiberCompletion_oneBranch
   rw [heta]
   exact hlocal
 
+/-- If the p-adic parameter has infinity-branch form `q⁻⁷ * a`, the
+completion of the rational fiber is the septic binomial model.  This is an
+algebra equivalence, not an irreducibility or field assertion. -/
+theorem globalFiberCompletion_sevenBranch
+    {p B C : ℕ} [Fact p.Prime]
+    (q a : ℤ_[p]) (ha : IsUnit a) (hq : q ≠ 0)
+    (hqI : q ∈ padicIdeal (p := p))
+    (hp3 : p ≠ 3) (hp5 : p ≠ 5) (hp7 : p ≠ 7)
+    (heta : algebraMap ℚ ℚ_[p] (eta B C) =
+      (algebraMap ℤ_[p] ℚ_[p] q)⁻¹ ^ 7 *
+        algebraMap ℤ_[p] ℚ_[p] a) :
+    Nonempty
+      ((ℚ_[p] ⊗[ℚ] (GlobalFiberAlgebra B C)) ≃ₐ[ℚ_[p]]
+        BinomialModelAlgebra 7
+          (algebraMap ℤ_[p] ℚ_[p]
+            ((15 : ℤ_[p])⁻¹ʳ * a))) := by
+  let hlocal := sevenBranchFixedModelPadicEquiv
+    q a ha hq hqI hp3 hp5 hp7
+  refine ⟨(globalFiberBaseChangePadicAlgEquiv p B C).trans ?_⟩
+  rw [heta]
+  exact hlocal
+
 /-- A prime dividing the numerator `B` puts the completion of the rational
 fiber on the quadratic-by-quintic branch.  Coprimality makes `C` a p-adic
 unit, and the branch parameters are `q = B / C` and `a = C⁻²`. -/
@@ -164,6 +190,56 @@ theorem globalFiberCompletion_of_prime_dvd_B
     change ((eta B C : ℚ) : ℚ_[p]) = _
     exact hetaCast.trans hratio.symm
   simpa only [a] using globalFiberCompletion_zeroBranch
+    q a ha hq hqI hp3 hp5 hp7 heta
+
+/-- A prime dividing the denominator `C` puts the whole completion on the
+septic infinity branch.  With the explicit normalization `q = C / B` and
+`a = B⁻²`, the binomial parameter is `1 / (15 * B^2)`.  A different unit
+normalization can give an equivalent parameter differing by a seventh power.
+-/
+theorem globalFiberCompletion_of_prime_dvd_C
+    {p B C : ℕ} [Fact p.Prime]
+    (hC : C ≠ 0) (hBC : Nat.Coprime B C) (hpC : p ∣ C)
+    (hp3 : p ≠ 3) (hp5 : p ≠ 5) (hp7 : p ≠ 7) :
+    Nonempty
+      ((ℚ_[p] ⊗[ℚ] (GlobalFiberAlgebra B C)) ≃ₐ[ℚ_[p]]
+        BinomialModelAlgebra 7
+          (algebraMap ℤ_[p] ℚ_[p]
+            ((15 : ℤ_[p])⁻¹ʳ * ((B : ℤ_[p])⁻¹ʳ) ^ 2))) := by
+  have hpB : ¬p ∣ B := by
+    have hBp : Nat.Coprime B p := Nat.Coprime.of_dvd_right hpC hBC
+    exact (Fact.out : p.Prime).coprime_iff_not_dvd.mp hBp.symm
+  have hBunit : IsUnit (B : ℤ_[p]) := natCast_isUnit_of_not_dvd hpB
+  let q : ℤ_[p] := (C : ℤ_[p]) * (B : ℤ_[p])⁻¹ʳ
+  let a : ℤ_[p] := ((B : ℤ_[p])⁻¹ʳ) ^ 2
+  have ha : IsUnit a := hBunit.ringInverse.pow 2
+  have hq : q ≠ 0 :=
+    mul_ne_zero (Nat.cast_ne_zero.mpr hC) hBunit.ringInverse.ne_zero
+  have hCI : (C : ℤ_[p]) ∈ padicIdeal (p := p) :=
+    natCast_mem_padicIdeal_of_dvd hpC
+  have hqI : q ∈ padicIdeal (p := p) :=
+    (padicIdeal (p := p)).mul_mem_right (B : ℤ_[p])⁻¹ʳ hCI
+  have hBmap := algebraMap_ringInverse_natCast (p := p) hBunit
+  have hBq : (B : ℚ_[p]) ≠ 0 := by
+    exact_mod_cast hBunit.ne_zero
+  have hCq : (C : ℚ_[p]) ≠ 0 := by
+    exact_mod_cast hC
+  have hratio :
+      (algebraMap ℤ_[p] ℚ_[p] q)⁻¹ ^ 7 *
+          algebraMap ℤ_[p] ℚ_[p] a =
+        (B : ℚ_[p]) ^ 5 / (C : ℚ_[p]) ^ 7 := by
+    simp only [q, a, map_mul, map_pow, map_natCast]
+    rw [hBmap]
+    field_simp [hBq, hCq]
+  have hetaCast : ((eta B C : ℚ) : ℚ_[p]) =
+      (B : ℚ_[p]) ^ 5 / (C : ℚ_[p]) ^ 7 := by
+    simp [eta]
+  have heta : algebraMap ℚ ℚ_[p] (eta B C) =
+      (algebraMap ℤ_[p] ℚ_[p] q)⁻¹ ^ 7 *
+        algebraMap ℤ_[p] ℚ_[p] a := by
+    change ((eta B C : ℚ) : ℚ_[p]) = _
+    exact hetaCast.trans hratio.symm
+  simpa only [a] using globalFiberCompletion_sevenBranch
     q a ha hq hqI hp3 hp5 hp7 heta
 
 /-- For a signature `(3,5,7)` equation, a prime dividing `A` puts the
