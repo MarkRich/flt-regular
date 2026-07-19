@@ -22,6 +22,7 @@ import BealRegular
 #print axioms BealRegular.SignatureReduction.gcd_powers_eq_one_iff
 #print axioms BealRegular.SignatureReduction.exists_reduced_generalized_fermat
 #print axioms BealRegular.SignatureReduction.bealConjecture_iff_reducedBealConjecture
+#print axioms BealRegular.AdicCompletenessPowers.isAdicComplete_pow_of_pos
 #print axioms BealRegular.AdicEtaleRigidity.finiteModule_isAdicComplete_of_noetherian
 #print axioms BealRegular.AdicEtaleRigidity.finiteAlgebra_isAdicComplete_map_of_noetherian
 #print axioms BealRegular.AdicEtaleRigidity.iInf_pow_eq_bot_of_isAdicComplete
